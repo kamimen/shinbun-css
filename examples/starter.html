@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>はじめの一枚 — shinbun.css 例</title>
+  <link rel="stylesheet" href="../src/shinbun.css">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <div class="demo-bar">
+    <a href="index.html">← 例の一覧</a>
+    <span>クラスは .sb-paper と .sb-page だけ。あとは素の HTML と data 属性</span>
+  </div>
+
+  <div class="demo-stage">
+    <!-- 「はじめの一枚」: 紙面と紙面領域のクラス以外は、クラスなしの素の HTML -->
+    <div class="sb-paper" style="--sb-dan: 8; --sb-chars: 10; --sb-fs: 0.8rem">
+      <main class="sb-page">
+
+        <header data-sb-span="3">
+          <h1>架空新聞</h1>
+          <p>第1号<br>朝刊（架空）</p>
+        </header>
+
+        <article data-sb-span="8">
+          <h2>古い倉庫が、市民の書斎に</h2>
+          <p>みどり市は、旧運河沿いの煉瓦倉庫を改修し、市民が自由に本を読み、書き物ができる施設を来年春に開くと発表した。</p>
+          <p>倉庫は一九二〇年代に建てられ、かつては川舟で運ばれた穀物を保管していた。住民団体が保存を求める署名を集め、市は解体の方針を転換した。</p>
+          <p>改修後は一階を閲覧室、二階を個人用の執筆席とする。蔵書は寄贈と購入を合わせて三万冊を目指す。</p>
+        </article>
+
+        <figure data-sb-span="4">
+          <img alt="煉瓦倉庫（ダミー）" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5'%3E%3Crect width='4' height='5' fill='%23bdb39a'/%3E%3C/svg%3E">
+          <figcaption>来春、書斎に生まれ変わる煉瓦倉庫（ダミー画像）</figcaption>
+        </figure>
+
+        <aside data-sb-span="4">
+          <h3>きょうの天気</h3>
+          <p>全国おおむね晴れ。朝晩は冷え込む。</p>
+        </aside>
+
+        <article data-sb-span="5">
+          <h2>地元の駅弁、海外へ</h2>
+          <p>ひなた町の老舗弁当店は、冷凍した駅弁を来月から東南アジア三か国へ出荷する。</p>
+        </article>
+
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="demo.js"></script>
+</body>
+</html>

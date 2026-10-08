@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>新聞風ブログのトップ — shinbun.css 例</title>
+  <link rel="stylesheet" href="../src/shinbun.css">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <div class="demo-bar">
+    <a href="index.html">← 例の一覧</a>
+    <span>配色:</span>
+    <button type="button" data-theme="light" aria-pressed="true">紙</button>
+    <button type="button" data-theme="dark" aria-pressed="false">夜</button>
+    <span id="overflow-report"></span>
+    <span class="demo-note">人物・団体・出来事はすべて架空です</span>
+  </div>
+
+  <div class="demo-stage">
+    <!-- 新聞風ブログのトップ: 横組みの紙面。記事一覧を、段グリッドに並べる -->
+    <div class="sb-paper" data-sb-writing="horizontal" style="--sb-dan-h: 6; --sb-fs: 0.9rem">
+      <header class="sb-masthead">
+        <div class="sb-masthead__side">
+          <span>川のまち日記（架空）</span>
+          <span>2026年10月8日 木曜日</span>
+        </div>
+        <h1 class="sb-masthead__title">川のまち日報</h1>
+        <div class="sb-masthead__side sb-masthead__side--end">
+          <span>記事 7 本</span>
+          <span>毎日更新（架空）</span>
+        </div>
+      </header>
+      <div class="sb-folio"><span><span class="sb-folio__section">トップ</span> 新着の記事</span><span>古い記事 →</span></div>
+
+      <main class="sb-page">
+        <article class="sb-article sb-article--lead" data-sb-span="4">
+          <h2 class="sb-headline sb-headline--l"><a href="blog-article.html">川のまちの書斎、開館までの道のり</a></h2>
+          <p class="sb-dateline"><time datetime="2026-10-07">2026年10月07日</time></p>
+          <p>倉庫の改修から開館までの記録。保存を求める署名、設計の工夫、工事の様子を、写真とともにたどる。</p>
+        </article>
+        <article class="sb-article" data-sb-span="2">
+          <h2 class="sb-headline sb-headline--s"><a href="blog-article.html">縦書きで読むニュースの設計</a></h2>
+          <p class="sb-dateline"><time datetime="2026-10-05">2026年10月05日</time></p>
+          <p>縦書きの紙面を、Web でどう再現するか。段と段抜きの考え方を整理する。</p>
+        </article>
+        <article class="sb-article" data-sb-span="2">
+          <h2 class="sb-headline sb-headline--s"><a href="blog-article.html">夜の川沿いを歩く</a></h2>
+          <p class="sb-dateline"><time datetime="2026-10-03">2026年10月03日</time></p>
+          <p>夜間パトロールに同行した。街灯の少ない通りで、見えてきたもの。</p>
+        </article>
+        <article class="sb-article" data-sb-span="2">
+          <h2 class="sb-headline sb-headline--s"><a href="blog-article.html">駅弁の冷凍技術</a></h2>
+          <p class="sb-dateline"><time datetime="2026-09-30">2026年09月30日</time></p>
+          <p>老舗弁当店の冷凍庫を見せてもらった。炊きたての食感を保つ工夫。</p>
+        </article>
+        <article class="sb-article" data-sb-span="2">
+          <h2 class="sb-headline sb-headline--s"><a href="blog-article.html">本の話：川の記憶</a></h2>
+          <p class="sb-dateline"><time datetime="2026-09-28">2026年09月28日</time></p>
+          <p>運河の町の百年を描く一冊の感想。</p>
+        </article>
+        <article class="sb-article" data-sb-span="2">
+          <h2 class="sb-headline sb-headline--s"><a href="blog-article.html">見守り隊、十周年</a></h2>
+          <p class="sb-dateline"><time datetime="2026-09-25">2026年09月25日</time></p>
+          <p>毎朝の交差点に立つ人たちの話。</p>
+        </article>
+        <article class="sb-article" data-sb-span="2">
+          <h2 class="sb-headline sb-headline--s"><a href="blog-article.html">秋の味覚まつりへ</a></h2>
+          <p class="sb-dateline"><time datetime="2026-09-22">2026年09月22日</time></p>
+          <p>栗、柿、新米。会場をひとまわりした。</p>
+        </article>
+
+        <aside class="sb-box" data-sb-span="2">
+          <p class="sb-box__title">このブログについて</p>
+          <p>川のまちの暮らしを、新聞のような紙面で記録する、架空のブログです。記事をクリックすると、記事ページへ移ります。</p>
+        </aside>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="demo.js"></script>
+</body>
+</html>

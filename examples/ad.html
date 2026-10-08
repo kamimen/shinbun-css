@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>全面広告 — shinbun.css 例</title>
+  <link rel="stylesheet" href="../src/shinbun.css">
+  <link rel="stylesheet" href="demo.css">
+  <style>
+    /* 全面広告の中身は広告主のデザイン。shinbun.css は枠（段と行の座標）だけを提供する */
+    .ad-body { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; padding: 2rem; background: #1b2a41; color: #f4eedd; text-indent: 0; text-align: center; }
+    .ad-body strong { font-size: 3.4rem; letter-spacing: .2em; }
+    .ad-body small { font-size: .9rem; opacity: .8; }
+  </style>
+</head>
+<body>
+  <div class="demo-bar">
+    <a href="index.html">← 例の一覧</a>
+    <span>配置の目印:</span>
+    <button type="button" data-debug="off" aria-pressed="true">なし</button>
+    <button type="button" data-debug="on" aria-pressed="false">あり</button>
+    <span class="demo-note">広告主・商品はすべて架空です</span>
+  </div>
+
+  <div class="demo-stage">
+    <!-- 全面広告: .sb-ad--full は、紙面の全段・全行を占める -->
+    <div class="sb-paper" data-sb-writing="vertical"
+         style="--sb-dan: 10; --sb-chars: 10; --sb-lines: 50; --sb-fs: 0.72rem">
+      <div class="sb-folio">
+        <span><span class="sb-folio__section">12面</span> 広告</span>
+        <span>架空新聞　2026年10月8日 木曜日</span>
+      </div>
+      <main class="sb-page sb-page--grid">
+        <div class="sb-ad sb-ad--full ad-body">
+          <strong>読む、という贅沢。</strong>
+          <small>架空書店　創業百年　広告（ダミー）</small>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="demo.js"></script>
+</body>
+</html>

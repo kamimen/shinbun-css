@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>市況面 — shinbun.css 例</title>
+  <link rel="stylesheet" href="../src/shinbun.css">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <div class="demo-bar">
+    <a href="index.html">← 例の一覧</a>
+    <span>配色:</span>
+    <button type="button" data-theme="light" aria-pressed="true">紙</button>
+    <button type="button" data-theme="dark" aria-pressed="false">夜</button>
+    <span>配置の目印:</span>
+    <button type="button" data-debug="off" aria-pressed="true">なし</button>
+    <button type="button" data-debug="on" aria-pressed="false">あり</button>
+    <span id="overflow-report"></span>
+    <span class="demo-note">銘柄・数値はすべて架空です</span>
+  </div>
+
+  <div class="demo-stage">
+    <!-- 市況面: 縦組みの記事と、横組みの表（数字は右寄せ・桁をそろえる） -->
+    <div class="sb-paper" data-sb-writing="vertical" data-sb-auto-tcy
+         style="--sb-dan: 10; --sb-chars: 10; --sb-lines: 50; --sb-fs: 0.72rem">
+      <div class="sb-folio">
+        <span><span class="sb-folio__section">15面</span> 市況</span>
+        <span>架空新聞　2026年10月8日 木曜日</span>
+      </div>
+
+      <main class="sb-page sb-page--grid">
+        <h1 class="sb-yoko sb-yoko--reverse" data-sb-x="1" data-sb-w="50" data-sb-y="1" data-sb-span="1" style="font-size: 2em">市況・マーケット</h1>
+
+        <article class="sb-article" data-sb-x="1" data-sb-w="16" data-sb-y="2" data-sb-span="5">
+          <p class="sb-kicker">株式</p>
+          <h2 class="sb-headline sb-headline--l">日経平均（架空）<br>続伸、小幅高</h2>
+          <p class="sb-dateline">東京</p>
+          <p class="sb-lead">八日の東京市場は小幅に続伸した。終値は前日比23円高の2万8,450円。</p>
+          <p>鉄道や建設など内需関連が買われた。一方、海運や化学は利益確定の売りに押された。</p>
+          <p>市場関係者は「週末を控え、様子見の雰囲気が強い」と話している。</p>
+        </article>
+
+        <table class="sb-table" data-sb-x="17" data-sb-w="17" data-sb-y="2" data-sb-span="5">
+          <caption>東証（架空）終値・前日比</caption>
+          <thead><tr><th scope="col">銘柄</th><th scope="col" class="sb-num">終値</th><th scope="col" class="sb-num">前日比</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">みどり電機</th><td class="sb-num">1,284</td><td class="sb-num">+12</td></tr>
+            <tr><th scope="row">ひなた食品</th><td class="sb-num">2,031</td><td class="sb-num">-8</td></tr>
+            <tr><th scope="row">川のまち銀行</th><td class="sb-num">845</td><td class="sb-num">+3</td></tr>
+            <tr><th scope="row">架空鉄道</th><td class="sb-num">3,420</td><td class="sb-num">+45</td></tr>
+            <tr><th scope="row">窓辺出版</th><td class="sb-num">612</td><td class="sb-num">-5</td></tr>
+            <tr><th scope="row">煉瓦建設</th><td class="sb-num">1,757</td><td class="sb-num">+21</td></tr>
+          </tbody>
+        </table>
+        <table class="sb-table" data-sb-x="34" data-sb-w="17" data-sb-y="2" data-sb-span="5">
+          <caption>東証（架空）終値・前日比</caption>
+          <thead><tr><th scope="col">銘柄</th><th scope="col" class="sb-num">終値</th><th scope="col" class="sb-num">前日比</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">運河海運</th><td class="sb-num">934</td><td class="sb-num">-14</td></tr>
+            <tr><th scope="row">月見産業</th><td class="sb-num">2,208</td><td class="sb-num">+9</td></tr>
+            <tr><th scope="row">朝凪化学</th><td class="sb-num">1,102</td><td class="sb-num">-2</td></tr>
+            <tr><th scope="row">夕映ガス</th><td class="sb-num">1,466</td><td class="sb-num">+6</td></tr>
+            <tr><th scope="row">書斎堂</th><td class="sb-num">390</td><td class="sb-num">+1</td></tr>
+            <tr><th scope="row">駅弁総業</th><td class="sb-num">1,018</td><td class="sb-num">-11</td></tr>
+          </tbody>
+        </table>
+
+        <article class="sb-article" data-sb-x="1" data-sb-w="16" data-sb-y="7" data-sb-span="4">
+          <p class="sb-kicker">為替</p>
+          <h2 class="sb-headline sb-headline--m">円、小動き</h2>
+          <p>東京外国為替市場の円相場は小動き。対ドルで149円台前半で取引された。</p>
+        </article>
+        <article class="sb-article" data-sb-x="17" data-sb-w="17" data-sb-y="7" data-sb-span="4">
+          <p class="sb-kicker">商品</p>
+          <h2 class="sb-headline sb-headline--m">新米、出回り始める</h2>
+          <p>今年の新米が店頭に並び始めた。産地では天候に恵まれ、品質は上々という。</p>
+        </article>
+        <aside class="sb-box" data-sb-x="34" data-sb-w="17" data-sb-y="7" data-sb-span="4">
+          <p class="sb-box__title">用語メモ</p>
+          <p>終値　その日の最後についた値段。前日比は、前日の終値との差。</p>
+        </aside>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="demo.js"></script>
+</body>
+</html>

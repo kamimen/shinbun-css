@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>社説面 — shinbun.css 例</title>
+  <link rel="stylesheet" href="../src/shinbun.css">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <div class="demo-bar">
+    <a href="index.html">← 例の一覧</a>
+    <span>配色:</span>
+    <button type="button" data-theme="light" aria-pressed="true">紙</button>
+    <button type="button" data-theme="dark" aria-pressed="false">夜</button>
+    <span>配置の目印:</span>
+    <button type="button" data-debug="off" aria-pressed="true">なし</button>
+    <button type="button" data-debug="on" aria-pressed="false">あり</button>
+    <span id="overflow-report"></span>
+    <span class="demo-note">人物・団体・出来事はすべて架空です</span>
+  </div>
+
+  <div class="demo-stage">
+    <!-- 社説面: 本文が主役。段数は少なく、行を長く、文字をやや大きく -->
+    <div class="sb-paper" data-sb-writing="vertical" data-sb-auto-tcy
+         style="--sb-dan: 10; --sb-chars: 10; --sb-lines: 50; --sb-fs: 0.72rem">
+      <div class="sb-folio">
+        <span><span class="sb-folio__section">8面</span> 社説・オピニオン</span>
+        <span>架空新聞　2026年10月8日 木曜日</span>
+      </div>
+
+      <main class="sb-page sb-page--grid">
+
+        <!-- 面名 -->
+        <h1 class="sb-yoko sb-yoko--reverse" data-sb-x="1" data-sb-w="8" data-sb-y="1" data-sb-span="1" style="font-size: 1.6em">社説</h1>
+
+        <aside class="sb-box" data-sb-x="1" data-sb-w="8" data-sb-y="2" data-sb-span="4">
+          <p class="sb-box__title">きょうのオピニオン</p>
+          <p>社説① 古い倉庫の使い道<br>社説② 見守りの輪を次へ<br>論説　静けさという公共財<br>声　読者から</p>
+        </aside>
+
+        <!-- 社説① -->
+        <article class="sb-article sb-article--editorial" data-sb-x="9" data-sb-w="18" data-sb-y="1" data-sb-span="6">
+          <h2 class="sb-headline sb-headline--l">古い倉庫の使い道<br>解体か、保存か</h2>
+          <p class="sb-sub">「市民の書斎」に学ぶこと</p>
+          <p>みどり市が、旧運河沿いの煉瓦倉庫を市民の書斎として改修する。いったんは解体に傾いた方針を覆したのは、2万筆を超える保存の署名だった。</p>
+          <p>古い建物をどうするかは、全国の自治体が抱える悩みである。壊せば維持費はかからないが、まちの記憶も消える。残せば費用がかさみ、使い道に頭を悩ませる。今回の判断は、その二者択一を超えた点に意味がある。</p>
+          <p>ただし課題も残る。総事業費は12億円。運営を市民ボランティアに頼る計画は、担い手が減ればたちまち行き詰まる。開館後の収支と人手の見通しを、早い段階で示してほしい。</p>
+          <p>建物は、使われてこそ生きる。住民の声を計画に取り込んだ手順は、他の自治体の参考になるだろう。</p>
+        </article>
+
+        <!-- 社説② -->
+        <article class="sb-article sb-article--editorial" data-sb-x="27" data-sb-w="14" data-sb-y="1" data-sb-span="6">
+          <h2 class="sb-headline sb-headline--l">見守りの輪を<br>次の世代へ</h2>
+          <p>あおば区の見守り隊が十周年を迎えた。隊員は80人を超える。朝の交差点に立つ人の顔を、子どもが覚える。地味だが、まちの安全を支える大切な営みである。</p>
+          <p>一方で、隊員の高齢化は進む。若い世代が参加しやすい形に改め、無理のない続け方を探る時期に来ている。</p>
+        </article>
+
+        <!-- 論説 -->
+        <article class="sb-article sb-column" data-sb-x="41" data-sb-w="10" data-sb-y="1" data-sb-span="6">
+          <p class="sb-kicker">論説</p>
+          <h2 class="sb-headline sb-headline--m">静けさという公共財</h2>
+          <p>図書館は静けさを守る場所だった。だがスマートフォンの普及で、静かに過ごせる空間は減っている。会話を禁じる部屋が公共の施設にあってよい、という考え方が、いま見直されている。</p>
+          <p class="sb-byline">（論説委員　窓辺）</p>
+        </article>
+
+        <!-- 読者の声 -->
+        <article class="sb-article" data-sb-x="9" data-sb-w="14" data-sb-y="7" data-sb-span="4">
+          <p class="sb-kicker">声</p>
+          <h2 class="sb-headline sb-headline--s">倉庫の書斎、楽しみに</h2>
+          <p>子どものころ、運河の倉庫で遊んだ記憶があります。あの場所が本の部屋になると聞き、胸が熱くなりました。開館したら、真っ先に通いたいです。（会社員・52歳）</p>
+        </article>
+
+        <article class="sb-article" data-sb-x="23" data-sb-w="14" data-sb-y="7" data-sb-span="4">
+          <p class="sb-kicker">声</p>
+          <h2 class="sb-headline sb-headline--s">見守り隊に感謝</h2>
+          <p>毎朝、交差点で声をかけてくださる隊員の皆さんのおかげで、安心して子どもを送り出せます。十周年、おめでとうございます。（主婦・38歳）</p>
+        </article>
+
+        <article class="sb-article" data-sb-x="37" data-sb-w="14" data-sb-y="7" data-sb-span="4">
+          <p class="sb-kicker">声</p>
+          <h2 class="sb-headline sb-headline--s">図書館に静けさを</h2>
+          <p>会話禁止の部屋があると知って、安心しました。落ち着いて本を読める場所は、貴重だと思います。（大学生・20歳）</p>
+        </article>
+
+        <div class="sb-ad sb-ad--kijishita" data-sb-x="1" data-sb-w="8" data-sb-y="7" data-sb-span="4">広告（ダミー）</div>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="demo.js"></script>
+</body>
+</html>

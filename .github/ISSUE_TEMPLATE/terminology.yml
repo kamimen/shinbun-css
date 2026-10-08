@@ -1,0 +1,22 @@
+name: 用語・規格の誤り
+description: 用語の定義、規格との対応、数値などの誤りや、出典の追加
+labels: [spec]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: 該当の箇所
+      placeholder: docs/SPEC.md §3 の「段」 など
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: 誤りと、正しい内容
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: 出典
+      description: URL、規格名と節番号、書名とページなど。本文を読んで確認した内容を書いてください

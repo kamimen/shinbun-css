@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>テレビ欄 — shinbun.css 例</title>
+  <link rel="stylesheet" href="../src/shinbun.css">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <div class="demo-bar">
+    <a href="index.html">← 例の一覧</a>
+    <span>配色:</span>
+    <button type="button" data-theme="light" aria-pressed="true">紙</button>
+    <button type="button" data-theme="dark" aria-pressed="false">夜</button>
+    <span>配置の目印:</span>
+    <button type="button" data-debug="off" aria-pressed="true">なし</button>
+    <button type="button" data-debug="on" aria-pressed="false">あり</button>
+    <span id="overflow-report"></span>
+    <span class="demo-note">番組・団体はすべて架空です</span>
+  </div>
+
+  <div class="demo-stage">
+    <!-- テレビ欄: 縦組みの紙面の中に、横組みの表（.sb-table）を置く -->
+    <div class="sb-paper" data-sb-writing="vertical" data-sb-auto-tcy
+         style="--sb-dan: 10; --sb-chars: 10; --sb-lines: 50; --sb-fs: 0.72rem">
+      <div class="sb-folio">
+        <span><span class="sb-folio__section">24面</span> テレビ・ラジオ</span>
+        <span>架空新聞　2026年10月8日 木曜日</span>
+      </div>
+
+      <main class="sb-page sb-page--grid">
+        <h1 class="sb-yoko sb-yoko--reverse" data-sb-x="1" data-sb-w="50" data-sb-y="1" data-sb-span="1" style="font-size: 2em">テレビ・ラジオ</h1>
+
+        <table class="sb-table sb-table--tv" data-sb-x="1" data-sb-w="50" data-sb-y="2" data-sb-span="7">
+          <caption>テレビ・ラジオ（10月8日・木）　番組はすべて架空です</caption>
+          <thead><tr><th scope="col"></th><th scope="col">架空総合</th><th scope="col">架空教育</th><th scope="col">ひなた</th><th scope="col">みどりTV</th><th scope="col">川のまち</th><th scope="col">ラジオ</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">6</th><td>おはよう列島</td><td>算数のひみつ</td><td>ひなた劇場</td><td>再放送ドラマ</td><td>学校だより</td><td>ナイター</td></tr>
+            <tr><th scope="row">7</th><td>午後の庭</td><td>こども番組</td><td>クイズ大会</td><td>歌謡祭</td><td>夜のニュース</td><td>ラジオ深夜便</td></tr>
+            <tr><th scope="row">8</th><td>連続ドラマ「窓辺」</td><td>古典の味わい</td><td>スポーツ</td><td>通販</td><td>地域ニュース</td><td>ニュース</td></tr>
+            <tr><th scope="row">9</th><td>深夜の音楽</td><td>たのしい理科</td><td>ワイドひなた</td><td>料理教室</td><td>川のまち劇場</td><td>夕方ワイド</td></tr>
+            <tr><th scope="row">10</th><td>ひるどき</td><td>手仕事の時間</td><td>アニメ劇場</td><td>天気とニュース</td><td>民話の旅</td><td>落語の時間</td></tr>
+            <tr><th scope="row">11</th><td>ニュース7</td><td>美術館へ行こう</td><td>映画「川辺の家」</td><td>野球中継</td><td>放送終了</td><td>朝のクラシック</td></tr>
+            <tr><th scope="row">12</th><td>ニュースナイト</td><td>うたの時間</td><td>朝の情報局</td><td>旅の記録</td><td>散歩道</td><td>午後のひととき</td></tr>
+            <tr><th scope="row">13</th><td>朝のニュース</td><td>高校講座</td><td>主婦の友</td><td>夕方ワイド</td><td>ふるさと便</td><td>音楽の泉</td></tr>
+            <tr><th scope="row">14</th><td>夕方ニュース</td><td>科学の扉</td><td>バラエティー</td><td>ミステリー</td><td>囲碁将棋</td><td>深夜の読書</td></tr>
+            <tr><th scope="row">15</th><td>ドキュメント川</td><td>語学講座</td><td>深夜アニメ</td><td>モーニング</td><td>町の話題</td><td>歌のアルバム</td></tr>
+            <tr><th scope="row">16</th><td>おはよう列島</td><td>算数のひみつ</td><td>ひなた劇場</td><td>再放送ドラマ</td><td>学校だより</td><td>ナイター</td></tr>
+            <tr><th scope="row">17</th><td>午後の庭</td><td>こども番組</td><td>クイズ大会</td><td>歌謡祭</td><td>夜のニュース</td><td>ラジオ深夜便</td></tr>
+            <tr><th scope="row">18</th><td>連続ドラマ「窓辺」</td><td>古典の味わい</td><td>スポーツ</td><td>通販</td><td>地域ニュース</td><td>ニュース</td></tr>
+            <tr><th scope="row">19</th><td>深夜の音楽</td><td>たのしい理科</td><td>ワイドひなた</td><td>料理教室</td><td>川のまち劇場</td><td>夕方ワイド</td></tr>
+            <tr><th scope="row">20</th><td>ひるどき</td><td>手仕事の時間</td><td>アニメ劇場</td><td>天気とニュース</td><td>民話の旅</td><td>落語の時間</td></tr>
+            <tr><th scope="row">21</th><td>ニュース7</td><td>美術館へ行こう</td><td>映画「川辺の家」</td><td>野球中継</td><td>放送終了</td><td>朝のクラシック</td></tr>
+            <tr><th scope="row">22</th><td>ニュースナイト</td><td>うたの時間</td><td>朝の情報局</td><td>旅の記録</td><td>散歩道</td><td>午後のひととき</td></tr>
+            <tr><th scope="row">23</th><td>朝のニュース</td><td>高校講座</td><td>主婦の友</td><td>夕方ワイド</td><td>ふるさと便</td><td>音楽の泉</td></tr>
+          </tbody>
+        </table>
+
+        <article class="sb-article" data-sb-x="1" data-sb-w="20" data-sb-y="9" data-sb-span="2">
+          <p class="sb-kicker">きょうの注目</p>
+          <h2 class="sb-headline sb-headline--s">連続ドラマ「窓辺」最終回へ</h2>
+          <p>午後八時から。川のまちの書斎を舞台にした物語が、ついに結末を迎える。</p>
+        </article>
+        <div class="sb-ad sb-ad--han2 sb-ad--kijishita" data-sb-x="21" data-sb-w="30" data-sb-span="2">広告（ダミー）</div>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="demo.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>一面 — shinbun.css 例</title>
+  <link rel="stylesheet" href="../src/shinbun.css">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <div class="demo-bar">
+    <a href="index.html">← 例の一覧</a>
+    <span>配色:</span>
+    <button type="button" data-theme="light" aria-pressed="true">紙</button>
+    <button type="button" data-theme="dark" aria-pressed="false">夜</button>
+    <span>配置の目印:</span>
+    <button type="button" data-debug="off" aria-pressed="true">なし</button>
+    <button type="button" data-debug="on" aria-pressed="false">あり</button>
+    <span id="overflow-report"></span>
+    <span class="demo-note">人物・団体・出来事はすべて架空です</span>
+  </div>
+
+  <div class="demo-stage">
+    <!-- 座標指定の一面: 縦 10 段 × 行軸 50 行 -->
+    <div class="sb-paper" data-sb-writing="vertical" data-sb-auto-tcy
+         style="--sb-dan: 10; --sb-chars: 10; --sb-lines: 50; --sb-fs: 0.72rem">
+      <div class="sb-folio">
+        <span><span class="sb-folio__section">1面</span> 総合</span>
+        <span>2026年10月8日 木曜日</span>
+      </div>
+
+      <main class="sb-page sb-page--grid">
+
+        <!-- 題字（右上・縦組み） -->
+        <header class="sb-nameplate" data-sb-x="1" data-sb-w="8" data-sb-y="1" data-sb-span="3">
+          <h1 class="sb-nameplate__title">架空新聞</h1>
+          <p class="sb-nameplate__meta">第12345号<br>朝刊（架空）</p>
+        </header>
+
+        <aside class="sb-box" data-sb-x="1" data-sb-w="8" data-sb-y="4" data-sb-span="2">
+          <p class="sb-box__title">きょうの天気</p>
+          <p>全国おおむね晴れ。朝晩は冷え込む。最高気温は東京18度、大阪20度。</p>
+        </aside>
+        <aside class="sb-box" data-sb-x="1" data-sb-w="8" data-sb-y="6" data-sb-span="2">
+          <p class="sb-box__title">今日のことば</p>
+          <p>書斎　本を読み、書き物をするための静かな部屋。</p>
+        </aside>
+
+        <!-- 横見出し（反転） -->
+        <h2 class="sb-yoko sb-yoko--reverse" data-sb-x="9" data-sb-w="26" data-sb-y="1" data-sb-span="2">川のまちに「市民の書斎」</h2>
+
+        <!-- トップ記事 -->
+        <article class="sb-article sb-article--lead" data-sb-x="9" data-sb-w="16" data-sb-y="3" data-sb-span="5">
+          <p class="sb-kicker">川のまち 再生へ</p>
+          <h2 class="sb-headline sb-headline--l">旧運河沿いに<br>市民の書斎</h2>
+          <p class="sb-sleeve">築百年の倉庫を改修</p>
+          <p class="sb-dateline">みどり市＝架空太郎</p>
+          <p class="sb-lead">みどり市は七日、旧運河沿いの煉瓦倉庫を改修し、市民が自由に本を読み、書き物ができる「市民の書斎」を来年春に開くと発表した。総事業費は12億円。</p>
+          <p>倉庫は一九二〇年代に建てられ、かつては川舟で運ばれた穀物を保管していた。市は老朽化を理由に解体を検討していたが、住民団体が保存を求める署名を2万筆集め、方針を転換した。</p>
+          <p>改修後は一階を閲覧室、二階を個人用の執筆席とする。蔵書は寄贈と購入を合わせて3万冊を目指し、開館時間は午前九時から午後十時までとした。</p>
+          <p>市長は記者会見で「川のまちの記憶を未来につなぐ拠点にしたい」と述べた。工事は十一月に着手し、来年三月の完成を予定している。</p>
+          <p class="sb-byline">（架空太郎）</p>
+        </article>
+
+        <figure class="sb-photo" data-sb-x="25" data-sb-w="10" data-sb-y="3" data-sb-span="3">
+          <div class="sb-photo__img ph" role="img" aria-label="煉瓦倉庫の写真（ダミー）" style="--sb-photo-ratio: 10 / 11"></div>
+          <figcaption class="sb-photo__caption">来春「市民の書斎」に生まれ変わる煉瓦倉庫（ダミー画像）</figcaption>
+        </figure>
+
+        <article class="sb-article" data-sb-x="25" data-sb-w="10" data-sb-y="6" data-sb-span="2">
+          <h2 class="sb-headline sb-headline--s">図書館とどう違う</h2>
+          <p>貸し出しはせず、館内での閲覧と執筆に特化する。会話は専用の部屋に限る。</p>
+        </article>
+
+        <!-- 経済・社会 -->
+        <article class="sb-article" data-sb-x="35" data-sb-w="8" data-sb-y="1" data-sb-span="4">
+          <p class="sb-kicker">経済</p>
+          <h2 class="sb-headline sb-headline--m">地元の駅弁、海外へ</h2>
+          <p class="sb-dateline">ひなた町＝経済花子</p>
+          <p>ひなた町の老舗弁当店は、冷凍した駅弁を来月から東南アジア三か国へ出荷する。国内の観光客が戻りきらないなか、新たな販路を探す。</p>
+          <p>店主の月見草子さんは「町の味を世界の食卓に届けたい」と話す。</p>
+        </article>
+
+        <article class="sb-article" data-sb-x="35" data-sb-w="8" data-sb-y="5" data-sb-span="3">
+          <p class="sb-kicker">社会</p>
+          <h2 class="sb-headline sb-headline--m">見守り隊、十周年</h2>
+          <p>あおば区の見守り隊が十周年を迎えた。隊員は80人を超える。</p>
+        </article>
+
+        <!-- 短信・コラム -->
+        <article class="sb-article" data-sb-x="43" data-sb-w="8" data-sb-y="1" data-sb-span="3">
+          <p class="sb-kicker">短信</p>
+          <h2 class="sb-headline sb-headline--s">秋の味覚まつり</h2>
+          <p>十日午前十時から、みどり市の中央公園で開かれる。雨天は体育館。</p>
+        </article>
+
+        <article class="sb-article sb-column" data-sb-x="43" data-sb-w="8" data-sb-y="4" data-sb-span="4">
+          <h2 class="sb-headline sb-headline--s">窓辺</h2>
+          <p>秋が深まると、朝の空気に透明な冷たさが混じる。窓を開けると、遠くで川の音がした。</p>
+          <p class="sb-byline">（窓辺）</p>
+        </article>
+
+        <!-- 記事下広告（下端の3段） -->
+        <div class="sb-ad sb-ad--kijishita" data-sb-x="1" data-sb-w="12" data-sb-span="3">広告（ダミー）</div>
+        <div class="sb-ad sb-ad--kijishita" data-sb-x="13" data-sb-w="12" data-sb-span="3">広告（ダミー）</div>
+        <div class="sb-ad sb-ad--kijishita" data-sb-x="25" data-sb-w="12" data-sb-span="3">広告（ダミー）</div>
+        <div class="sb-ad sb-ad--kijishita" data-sb-x="37" data-sb-w="14" data-sb-span="3">広告（ダミー）</div>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="demo.js"></script>
+</body>
+</html>

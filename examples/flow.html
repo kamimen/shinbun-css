@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>位置指定なしの紙面 — shinbun.css 例</title>
+  <link rel="stylesheet" href="../src/shinbun.css">
+  <style>
+    body { margin: 0; background: #d9d2bf; font-family: system-ui, sans-serif; }
+    .demo-bar { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; padding: .6rem 1rem; background: #2b2820; color: #eee6d2; font-size: .85rem; }
+    .demo-bar button { font: inherit; padding: .25rem .8rem; border: 1px solid #eee6d2; background: transparent; color: inherit; border-radius: 4px; cursor: pointer; }
+    .demo-bar button[aria-pressed="true"] { background: #eee6d2; color: #2b2820; }
+    .demo-stage { max-width: 100%; padding: 1rem; }
+    .sb-paper { max-width: 1400px; margin-inline: auto; padding: 1rem 1.2rem 1.4rem; box-shadow: 0 4px 24px rgb(0 0 0 / .25); }
+    .ph { background: linear-gradient(135deg, #bdb39a, #8e856f); }
+    .ph--b { background: linear-gradient(160deg, #a9b3a4, #6f7d6c); }
+  </style>
+</head>
+<body>
+  <div class="demo-bar">
+    <a href="index.html">← 例の一覧</a> <strong>位置指定なし（自動で詰める）</strong>
+    <span>組方向:</span>
+    <button type="button" data-writing="vertical" aria-pressed="true">縦組み</button>
+    <button type="button" data-writing="horizontal" aria-pressed="false">横組み</button>
+    <span>配色:</span>
+    <button type="button" data-theme="light" aria-pressed="true">紙</button>
+    <button type="button" data-theme="dark" aria-pressed="false">夜</button>
+    <span>この紙面の人物・団体・出来事はすべて架空です。</span>
+  </div>
+
+  <div class="demo-stage">
+    <div class="sb-paper" id="paper" data-sb-writing="vertical" data-sb-auto-tcy>
+      <header class="sb-masthead">
+        <div class="sb-masthead__side">
+          <span>第12345号</span>
+          <span>（日刊・架空）</span>
+        </div>
+        <h1 class="sb-masthead__title">架空新聞</h1>
+        <div class="sb-masthead__side sb-masthead__side--end">
+          <span>2026年10月8日 木曜日</span>
+          <span>朝刊 1面</span>
+        </div>
+      </header>
+
+      <div class="sb-folio">
+        <span>shinbun.css デモ紙面</span>
+        <span>縦10段×1段10字の簡易版面</span>
+      </div>
+
+      <main class="sb-page">
+
+        <!-- トップ記事: 6段 -->
+        <article class="sb-article sb-article--lead" data-sb-span="6">
+          <p class="sb-kicker">川のまち 再生へ</p>
+          <h2 class="sb-headline sb-headline--xl">旧運河沿いに<br>市民の書斎</h2>
+          <p class="sb-sleeve">築百年の倉庫を改修</p>
+          <p class="sb-sub">来春開館 蔵書3万冊</p>
+          <p class="sb-dateline">みどり市＝架空太郎</p>
+          <p class="sb-lead">みどり市は七日、旧運河沿いの煉瓦倉庫を改修し、市民が自由に本を読み、書き物ができる「市民の書斎」を来年春に開くと発表した。総事業費は12億円。</p>
+          <p>倉庫は一九二〇年代に建てられ、かつては川舟で運ばれた穀物を保管していた。市は老朽化を理由に解体を検討していたが、住民団体が保存を求める署名を2万筆集め、方針を転換した。</p>
+          <p>改修後は一階を閲覧室、二階を個人用の執筆席とする。蔵書は寄贈と購入を合わせて3万冊を目指し、開館時間は午前九時から午後十時までとした。</p>
+          <p>設計を担当する建築家の水無月花子氏は「古い梁と煉瓦をできるだけ残し、静かに過ごせる場所にしたい」と話した。運営は市民ボランティアが中心となり、司書資格を持つ職員が常駐する。</p>
+          <p>市長は記者会見で「川のまちの記憶を未来につなぐ拠点にしたい」と述べた。工事は十一月に着手し、来年三月の完成を予定している。</p>
+          <p class="sb-byline">（架空太郎）</p>
+        </article>
+
+        <!-- 写真つき: 4段 -->
+        <article class="sb-article" data-sb-span="4">
+          <h2 class="sb-headline sb-headline--m">運河の煉瓦倉庫、<br>夕日に染まる</h2>
+          <figure class="sb-photo">
+            <div class="sb-photo__img ph" role="img" aria-label="煉瓦倉庫の写真（ダミー）"></div>
+            <figcaption class="sb-photo__caption">来春「市民の書斎」に生まれ変わる煉瓦倉庫（みどり市）＝ダミー画像</figcaption>
+          </figure>
+          <p>倉庫の外壁には、当時の職人が刻んだ刻印が今も残る。市は改修にあわせて見学ルートを設け、歴史を伝える展示も用意する。</p>
+        </article>
+
+        <!-- 経済: 5段 -->
+        <article class="sb-article" data-sb-span="5">
+          <p class="sb-kicker">経済</p>
+          <h2 class="sb-headline sb-headline--l">地元の駅弁、<br>海外に出荷へ</h2>
+          <p class="sb-dateline">ひなた町＝経済花子</p>
+          <p class="sb-lead">ひなた町の老舗弁当店は、冷凍した駅弁を来月から東南アジア三か国へ出荷する。国内の観光客が戻りきらないなか、新たな販路を探す。</p>
+          <p>出荷するのは、地元産の鮭と山菜を使った二種類。急速冷凍の技術を導入し、解凍後も炊きたての食感が保たれるという。</p>
+          <p>店主の月見草子さんは「町の味を世界の食卓に届けたい」と話す。初年度は5万食の販売を目標に掲げた。</p>
+        </article>
+
+        <!-- 囲み: 3段 -->
+        <article class="sb-article" data-sb-span="3">
+          <aside class="sb-box">
+            <p class="sb-box__title">ポイント</p>
+            <p>・開館は来年春<br>・蔵書は3万冊が目標<br>・運営は市民中心</p>
+          </aside>
+          <h2 class="sb-headline sb-headline--s">図書館とどう違う</h2>
+          <p>貸し出しはせず、館内での閲覧と執筆に特化する。静けさを保つため、会話は専用の部屋に限る。</p>
+        </article>
+
+        <!-- 社会: 4段 -->
+        <article class="sb-article" data-sb-span="4">
+          <p class="sb-kicker">社会</p>
+          <h2 class="sb-headline sb-headline--l">通学路の<br>見守り隊、<br>十周年</h2>
+          <p class="sb-dateline">あおば区＝見守川</p>
+          <p>あおば区の見守り隊が、活動開始から十周年を迎えた。発足当時は十数人だった隊員は、いまでは80人を超える。</p>
+          <p>毎朝の交差点に立ち、児童に声をかける。隊長の八百屋さんは「顔を覚えてもらえるのが何よりの励み」と笑顔を見せた。</p>
+          <p>区は記念の式典を開き、長年の活動に感謝状を贈る予定だ。</p>
+        </article>
+
+        <!-- コラム: 3段 -->
+        <article class="sb-article sb-column" data-sb-span="3">
+          <h2 class="sb-headline sb-headline--s">朝のコラム「窓辺」</h2>
+          <p>秋が深まると、朝の空気に透明な冷たさが混じる。窓を開けると、遠くで川の音がした。</p>
+          <p>かつてこの町の人々は、川の音で天気を知ったという。いまは画面の予報に頼るが、音を聞き分ける習慣を少し取り戻したくなる。</p>
+          <p>倉庫が書斎に変わるなら、そこにも窓があってほしい。川の音が届く窓が。</p>
+          <p class="sb-byline">（窓辺）</p>
+        </article>
+
+        <!-- 広告: 3段 -->
+        <article class="sb-article sb-ad" data-sb-span="3">
+          <span>広告（ダミー）</span>
+        </article>
+
+        <!-- 短信: 4段 -->
+        <article class="sb-article" data-sb-span="4">
+          <p class="sb-kicker">短信</p>
+          <h2 class="sb-headline sb-headline--s">秋の味覚まつり、土曜に開催</h2>
+          <p>みどり市の中央公園で、十日午前十時から秋の味覚まつりが開かれる。地元の農家が栗や柿、新米を販売するほか、ステージでは郷土芸能が披露される。雨天の場合は体育館に会場を移す。</p>
+          <p>問い合わせは実行委員会（架空）まで。</p>
+        </article>
+
+      </main>
+
+      <footer class="sb-folio" style="margin-block: .8rem 0">
+        <span>本紙面はshinbun.cssのデモです。実在の新聞社・人物・団体とは関係ありません。</span>
+        <span>MIT License</span>
+      </footer>
+    </div>
+  </div>
+
+  <script type="module" src="../src/shinbun.js"></script>
+  <script>
+    const paper = document.getElementById("paper");
+    document.querySelectorAll("[data-writing]").forEach((b) => b.addEventListener("click", () => {
+      paper.dataset.sbWriting = b.dataset.writing;
+      document.querySelectorAll("[data-writing]").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+    }));
+    document.querySelectorAll("[data-theme]").forEach((b) => b.addEventListener("click", () => {
+      paper.dataset.sbTheme = b.dataset.theme;
+      document.querySelectorAll("[data-theme]").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+    }));
+  </script>
+</body>
+</html>

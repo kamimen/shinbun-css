@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>文化・読書面 — shinbun.css 例</title>
+  <link rel="stylesheet" href="../src/shinbun.css">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <div class="demo-bar">
+    <a href="index.html">← 例の一覧</a>
+    <span>配色:</span>
+    <button type="button" data-theme="light" aria-pressed="true">紙</button>
+    <button type="button" data-theme="dark" aria-pressed="false">夜</button>
+    <span>配置の目印:</span>
+    <button type="button" data-debug="off" aria-pressed="true">なし</button>
+    <button type="button" data-debug="on" aria-pressed="false">あり</button>
+    <span id="overflow-report"></span>
+    <span class="demo-note">人物・団体・出来事はすべて架空です</span>
+  </div>
+
+  <div class="demo-stage">
+    <div class="sb-paper" data-sb-writing="vertical" data-sb-auto-tcy
+         style="--sb-dan: 10; --sb-chars: 10; --sb-lines: 50; --sb-fs: 0.72rem">
+      <div class="sb-folio">
+        <span><span class="sb-folio__section">22面</span> 文化・読書</span>
+        <span>架空新聞　2026年10月8日 木曜日</span>
+      </div>
+
+      <main class="sb-page sb-page--grid">
+
+        <article class="sb-article sb-article--lead" data-sb-x="1" data-sb-w="17" data-sb-y="1" data-sb-span="6">
+          <p class="sb-kicker">文化</p>
+          <h2 class="sb-headline sb-headline--l">倉庫の書斎で<br>朗読の夕べ</h2>
+          <p class="sb-dateline">みどり市＝文化花子</p>
+          <p class="sb-lead">開館を控えた煉瓦倉庫で、地元の作家による朗読会が開かれた。</p>
+          <p>古い梁の下に、約百人の市民が集まった。作家は、川のまちを舞台にした短編を朗読し、会場は静かに聞き入った。</p>
+          <p>朗読のあと、作家は「本は、静かな場所でこそ読まれる。ここがその場所になってほしい」と話した。</p>
+        </article>
+
+        <figure class="sb-photo" data-sb-x="18" data-sb-w="10" data-sb-y="1" data-sb-span="4">
+          <div class="sb-photo__img ph" role="img" aria-label="朗読会（ダミー）"></div>
+          <figcaption class="sb-photo__caption">朗読する作家（ダミー画像）</figcaption>
+        </figure>
+        <aside class="sb-box" data-sb-x="18" data-sb-w="10" data-sb-y="5" data-sb-span="2">
+          <p class="sb-box__title">次の予定</p>
+          <p>朗読の夕べは、毎月第二土曜に開く。</p>
+        </aside>
+
+        <h1 class="sb-yoko sb-yoko--reverse" data-sb-x="28" data-sb-w="23" data-sb-y="1" data-sb-span="1" style="font-size: 1.6em">読書</h1>
+
+        <article class="sb-article" data-sb-x="28" data-sb-w="12" data-sb-y="2" data-sb-span="5">
+          <p class="sb-kicker">書評</p>
+          <h2 class="sb-headline sb-headline--m">『川の記憶』</h2>
+          <p class="sb-sub">運河の町の百年を描く</p>
+          <p>運河のまちの百年を、そこに暮らした人々の声でたどる一冊。穀物を運んだ舟、倉庫の灯り、祭りの夜。小さな出来事の積み重ねが、町の姿を形づくる。</p>
+          <p class="sb-byline">（評・書斎太郎）</p>
+        </article>
+        <article class="sb-article" data-sb-x="40" data-sb-w="11" data-sb-y="2" data-sb-span="5">
+          <p class="sb-kicker">書評</p>
+          <h2 class="sb-headline sb-headline--m">『窓辺の午後』</h2>
+          <p class="sb-sub">静けさを読む短編集</p>
+          <p>何も起こらない午後の、細やかな描写が心地よい。読み終えたあと、窓の外の光が違って見える。</p>
+          <p class="sb-byline">（評・月見草子）</p>
+        </article>
+
+        <article class="sb-article" data-sb-x="1" data-sb-w="27" data-sb-y="7" data-sb-span="4">
+          <p class="sb-kicker">連載</p>
+          <h2 class="sb-headline sb-headline--m">川のまち物語（12）</h2>
+          <p>前回までのあらすじ　倉庫の二階で、少女は古い日記を見つける。日記には、運河の町の夜明けが記されていた。</p>
+          <p>少女は日記を抱え、階段を下りた。外は、朝の光に満ちていた。川面には、舟が一艘、ゆっくりと進んでいく。</p>
+          <p class="sb-byline">（絵・窓辺　文・書斎）</p>
+        </article>
+        <aside class="sb-box" data-sb-x="28" data-sb-w="23" data-sb-y="7" data-sb-span="4">
+          <p class="sb-box__title">今週の新刊</p>
+          <p>『川の記憶』（運河書房）<br>『窓辺の午後』（夕映社）<br>『倉庫の灯り』（煉瓦出版）</p>
+        </aside>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="demo.js"></script>
+</body>
+</html>

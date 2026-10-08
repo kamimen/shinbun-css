@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>社会面 — shinbun.css 例</title>
+  <link rel="stylesheet" href="../src/shinbun.css">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <div class="demo-bar">
+    <a href="index.html">← 例の一覧</a>
+    <span>配色:</span>
+    <button type="button" data-theme="light" aria-pressed="true">紙</button>
+    <button type="button" data-theme="dark" aria-pressed="false">夜</button>
+    <span>配置の目印:</span>
+    <button type="button" data-debug="off" aria-pressed="true">なし</button>
+    <button type="button" data-debug="on" aria-pressed="false">あり</button>
+    <span id="overflow-report"></span>
+    <span class="demo-note">人物・団体・出来事はすべて架空です</span>
+  </div>
+
+  <div class="demo-stage">
+    <div class="sb-paper" data-sb-writing="vertical" data-sb-auto-tcy
+         style="--sb-dan: 10; --sb-chars: 10; --sb-lines: 50; --sb-fs: 0.72rem">
+      <div class="sb-folio">
+        <span><span class="sb-folio__section">5面</span> 社会</span>
+        <span>架空新聞　2026年10月8日 木曜日</span>
+      </div>
+
+      <main class="sb-page sb-page--grid">
+
+        <article class="sb-article sb-article--lead" data-sb-x="1" data-sb-w="17" data-sb-y="1" data-sb-span="6">
+          <p class="sb-kicker">みどり市</p>
+          <h2 class="sb-headline sb-headline--l">川沿いの町で<br>夜間パトロール</h2>
+          <p class="sb-sleeve">住民が見回り　四月から</p>
+          <p class="sb-dateline">みどり市＝見回川</p>
+          <p class="sb-lead">みどり市の住民団体が、来月から夜間のパトロールを始める。街灯の少ない川沿いの通りを、毎晩二人一組で歩く。</p>
+          <p>参加するのは、町内会のメンバーや商店主ら40人。午後七時から九時まで、三つの班が交代で回る。不審な人や、倒れている人を見かけたときは、すぐに市の窓口へ連絡する。</p>
+          <p>団体の代表は「顔の見える見守りで、安心して歩ける町にしたい」と話した。市は、反射材のたすきと、連絡用の携帯電話を貸し出す。</p>
+        </article>
+
+        <figure class="sb-photo" data-sb-x="18" data-sb-w="10" data-sb-y="1" data-sb-span="4">
+          <div class="sb-photo__img ph ph--blue" role="img" aria-label="夜の川沿い（ダミー）"></div>
+          <figcaption class="sb-photo__caption">試験的に歩いた夜の川沿いの通り（ダミー画像）</figcaption>
+        </figure>
+
+        <article class="sb-article" data-sb-x="18" data-sb-w="10" data-sb-y="5" data-sb-span="2">
+          <h2 class="sb-headline sb-headline--s">貸し出し、40セット</h2>
+          <p>市は反射材のたすきなど40セットを用意する。</p>
+        </article>
+
+        <article class="sb-article" data-sb-x="28" data-sb-w="12" data-sb-y="1" data-sb-span="4">
+          <p class="sb-kicker">ひなた町</p>
+          <h2 class="sb-headline sb-headline--m">商店街に新しい図書コーナー</h2>
+          <p class="sb-dateline">ひなた町＝本町花子</p>
+          <p>ひなた町の商店街の空き店舗に、本を自由に読める小さな図書コーナーが開かれた。蔵書は、住民の寄贈による約千冊。</p>
+        </article>
+
+        <article class="sb-article" data-sb-x="28" data-sb-w="12" data-sb-y="5" data-sb-span="2">
+          <h2 class="sb-headline sb-headline--s">自転車の事故、減る</h2>
+          <p>市内の自転車の事故件数は、前年より一割減った。</p>
+        </article>
+
+        <aside class="sb-box" data-sb-x="40" data-sb-w="11" data-sb-y="1" data-sb-span="3">
+          <p class="sb-box__title">相談窓口</p>
+          <p>夜間パトロールへの参加や、見守りの相談は、市の地域課で受け付ける。</p>
+        </aside>
+
+        <article class="sb-article sb-column" data-sb-x="40" data-sb-w="11" data-sb-y="4" data-sb-span="3">
+          <h2 class="sb-headline sb-headline--s">窓辺</h2>
+          <p>夜の川沿いは、昼とは別の町のようだ。水の音だけが、よく聞こえる。</p>
+          <p class="sb-byline">（窓辺）</p>
+        </article>
+
+        <div class="sb-ad sb-ad--kijishita" data-sb-x="1" data-sb-w="25" data-sb-span="3">広告（ダミー）</div>
+        <div class="sb-ad sb-ad--kijishita" data-sb-x="26" data-sb-w="25" data-sb-span="3">広告（ダミー）</div>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="demo.js"></script>
+</body>
+</html>

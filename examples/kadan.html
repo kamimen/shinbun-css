@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>歌壇・俳壇面 — shinbun.css 例</title>
+  <link rel="stylesheet" href="../src/shinbun.css">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <div class="demo-bar">
+    <a href="index.html">← 例の一覧</a>
+    <span>配色:</span>
+    <button type="button" data-theme="light" aria-pressed="true">紙</button>
+    <button type="button" data-theme="dark" aria-pressed="false">夜</button>
+    <span>配置の目印:</span>
+    <button type="button" data-debug="off" aria-pressed="true">なし</button>
+    <button type="button" data-debug="on" aria-pressed="false">あり</button>
+    <span id="overflow-report"></span>
+    <span class="demo-note">人物・団体・出来事はすべて架空です</span>
+  </div>
+
+  <div class="demo-stage">
+    <!-- 歌壇・俳壇面: 「国内外から寄せられる短歌・俳句を味わう」。画像検索で見た紙面の構成（中央に歌壇・俳壇の題字と挿絵、選者ごとに作品と評を並べ、作品には（居住地）と氏名を添える）にならった例。歌壇・俳壇は、4 人の選者が共選する（朝日新聞「俳壇もネット投稿を始めます」）。作品は、この例のために書いた架空のもの -->
+    <div class="sb-paper" data-sb-writing="vertical" data-sb-auto-tcy
+         style="--sb-dan: 10; --sb-chars: 10; --sb-lines: 50; --sb-fs: 0.72rem">
+      <div class="sb-folio">
+        <span><span class="sb-folio__section">14面</span> 歌壇・俳壇</span>
+        <span>架空新聞　2026年10月8日 木曜日</span>
+      </div>
+
+      <main class="sb-page sb-page--grid">
+
+        <article class="sb-article" data-sb-x="1" data-sb-w="5" data-sb-y="1" data-sb-span="10">
+          <h2 class="sb-headline sb-headline--s">風間 清選</h2>
+          <p>朝霧の運河をわたる舟の音ゆっくり町が目をひらきゆく（みどり市）川上花子</p>
+          <p>返却の期限を過ぎた文庫本しおりのあたり秋の陽がある（ひなた町）窓辺一郎</p>
+          <p>夕映えの橋にもたれて待つひとのかばんに小さな栗の実がある（朝凪村）岸辺明</p>
+          <p>湯のみから立つ湯気の向こうに母の背が少し丸くて冬をむかえる（夕映町）本町洋</p>
+          <p class="sb-flush">評　日常の小さな場面を、静かな言葉で切り取った歌が並んだ。</p>
+        </article>
+        <article class="sb-article" data-sb-x="6" data-sb-w="5" data-sb-y="1" data-sb-span="10">
+          <h2 class="sb-headline sb-headline--s">水野 小夜選</h2>
+          <p>改札を抜けて振り向く子の声が風にまじって階段のぼる（みどり市）見回涼</p>
+          <p>ひとり分の味噌汁つくる朝の鍋ふたり分でも足りる気がする（川上町）野分花</p>
+          <p>川べりに干した洗濯物のうえ雲がひとつずつ通ってゆけり（運河町）煉瓦太郎</p>
+          <p>図書館の閉館の曲聴きながら読みかけの頁に指をはさむ（ひなた町）書斎友</p>
+          <p class="sb-flush">評　暮らしの音や気配を、結びの二句で受け止める歌が目に付いた。</p>
+        </article>
+        <article class="sb-article" data-sb-x="11" data-sb-w="5" data-sb-y="1" data-sb-span="10">
+          <h2 class="sb-headline sb-headline--s">石川 朔選</h2>
+          <p>新米の袋を抱えて帰る道月がずっとついてきている（みどり市）秋津実</p>
+          <p>回覧板わたしに回って来た夜は隣の犬も静かであった（朝凪村）石橋守</p>
+          <p>落ち葉焚き煙のなかの顔たちが昔の写真みたいに笑う（夕映町）火野灯</p>
+          <p>バス停の時刻表にも秋が来て二分遅れを許しあう朝（川上町）朝霧凪</p>
+          <p class="sb-flush">評　比喩が、無理なく日常に溶け込んでいる歌を選んだ。</p>
+        </article>
+        <article class="sb-article" data-sb-x="16" data-sb-w="5" data-sb-y="1" data-sb-span="10">
+          <h2 class="sb-headline sb-headline--s">浅川 早苗選</h2>
+          <p>ふるさとの祭りの太鼓聞こえ来て受話器の向こう父の咳ばらい（みどり市）遠野鈴</p>
+          <p>雨あがり傘をたたんで見あげれば窓の灯りが一つずつ増ゆ（ひなた町）灯台守</p>
+          <p>夜勤明け朝のパン屋の匂いして今日の私に戻ってゆけり（運河町）夜明子</p>
+          <p>老眼鏡探していたら首にあり笑う私を猫が見ている（夕映町）猫目石</p>
+          <p class="sb-flush">評　ユーモアのある歌が多く、読んでいて楽しい週だった。</p>
+        </article>
+        <header class="sb-nameplate" data-sb-x="21" data-sb-w="10" data-sb-y="1" data-sb-span="3">
+          <h1 class="sb-nameplate__title">歌壇　俳壇</h1>
+          <p class="sb-nameplate__meta">今週の入選作<br>（すべて架空）</p>
+        </header>
+        <figure class="sb-photo" data-sb-x="21" data-sb-w="10" data-sb-y="4" data-sb-span="3">
+          <div class="sb-photo__img ph ph--blue" role="img" aria-label="挿絵（ダミー）"></div>
+          <figcaption class="sb-photo__caption">今週の挿絵（ダミー画像）</figcaption>
+        </figure>
+        <aside class="sb-box" data-sb-x="21" data-sb-w="10" data-sb-y="7" data-sb-span="4">
+          <p class="sb-box__title">投稿のしかた</p>
+          <p>はがきに、一枚一作品。住所、氏名、電話番号を書く。（この欄は、投稿の案内の例です）</p>
+        </aside>
+        <article class="sb-article" data-sb-x="31" data-sb-w="5" data-sb-y="1" data-sb-span="10">
+          <h2 class="sb-headline sb-headline--s">高梨 蒼選</h2>
+          <p>秋灯や本の背表紙読み進む（みどり市）川上花子</p>
+          <p>新米の湯気まっすぐに立ちにけり（ひなた町）窓辺一郎</p>
+          <p>運河ゆく舟の影ゆく秋の暮（朝凪村）岸辺明</p>
+          <p>栗ごはん祖母の茶碗の欠けしまま（夕映町）本町洋</p>
+          <p>鰯雲子らの自転車列をなす（川上町）野分花</p>
+          <p class="sb-flush">評　季語の働きが、はっきりと伝わる句が並んだ。</p>
+        </article>
+        <article class="sb-article" data-sb-x="36" data-sb-w="5" data-sb-y="1" data-sb-span="10">
+          <h2 class="sb-headline sb-headline--s">森田 灯選</h2>
+          <p>夜長し頁の端の折れ癖（みどり市）見回涼</p>
+          <p>柿の木に梯子かかりて日暮れけり（運河町）煉瓦太郎</p>
+          <p>案山子にもまだ名のなくて雨となる（ひなた町）書斎友</p>
+          <p>秋風や改札口の人まばら（朝凪村）石橋守</p>
+          <p>稲妻や橋のたもとの小さき灯（夕映町）火野灯</p>
+          <p class="sb-flush">評　取り合わせの妙を楽しんだ。</p>
+        </article>
+        <article class="sb-article" data-sb-x="41" data-sb-w="5" data-sb-y="1" data-sb-span="10">
+          <h2 class="sb-headline sb-headline--s">伊藤 澄選</h2>
+          <p>月今宵窓辺に猫の影ひとつ（みどり市）猫目石</p>
+          <p>落葉踏む音だけつづく帰り道（川上町）朝霧凪</p>
+          <p>とんぼ来て釣り糸の先ゆれにけり（運河町）秋津実</p>
+          <p>秋の川ひかりばかりが流れゆく（ひなた町）遠野鈴</p>
+          <p>新蕎麦や暖簾の揺れる昼さがり（夕映町）灯台守</p>
+          <p class="sb-flush">評　見たままを詠んで、景が浮かぶ句を採った。</p>
+        </article>
+        <article class="sb-article" data-sb-x="46" data-sb-w="5" data-sb-y="1" data-sb-span="10">
+          <h2 class="sb-headline sb-headline--s">大野 凪選</h2>
+          <p>霜降や湯気立つ鍋を囲みけり（みどり市）夜明子</p>
+          <p>冬支度毛糸の玉のころがりぬ（朝凪村）岸辺明</p>
+          <p>秋深し町の時計の少し狂う（川上町）野分花</p>
+          <p>どんぐりを数えて子らの帰り道（ひなた町）窓辺一郎</p>
+          <p>稲架の影長く伸びゆく夕かな（夕映町）本町洋</p>
+          <p class="sb-flush">評　季節の移り変わりに目を向けた句が多かった。</p>
+        </article>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="demo.js"></script>
+</body>
+</html>

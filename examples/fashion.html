@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ファッション面 — shinbun.css 例</title>
+  <link rel="stylesheet" href="../src/shinbun.css">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <div class="demo-bar">
+    <a href="index.html">← 例の一覧</a>
+    <span>配色:</span>
+    <button type="button" data-theme="light" aria-pressed="true">紙</button>
+    <button type="button" data-theme="dark" aria-pressed="false">夜</button>
+    <span>配置の目印:</span>
+    <button type="button" data-debug="off" aria-pressed="true">なし</button>
+    <button type="button" data-debug="on" aria-pressed="false">あり</button>
+    <span id="overflow-report"></span>
+    <span class="demo-note">人物・団体・出来事はすべて架空です</span>
+  </div>
+
+  <div class="demo-stage">
+    <!-- ファッション面: 「内外のブランド・コレクションの最新動向」。写真を大きく使い、短い記事を添える例。ブランド名・デザイナー名は架空 -->
+    <div class="sb-paper" data-sb-writing="vertical" data-sb-auto-tcy
+         style="--sb-dan: 10; --sb-chars: 10; --sb-lines: 50; --sb-fs: 0.72rem">
+      <div class="sb-folio">
+        <span><span class="sb-folio__section">16面</span> ファッション</span>
+        <span>架空新聞　2026年10月8日 木曜日</span>
+      </div>
+
+      <main class="sb-page sb-page--grid">
+
+        <h2 class="sb-yoko sb-yoko--reverse" data-sb-x="1" data-sb-w="50" data-sb-y="1" data-sb-span="1" style="font-size: 1.6em">来春夏のコレクション</h2>
+        <figure class="sb-photo" data-sb-x="1" data-sb-w="19" data-sb-y="2" data-sb-span="6">
+          <div class="sb-photo__img ph ph--blue" role="img" aria-label="モデルの写真（ダミー）"></div>
+          <figcaption class="sb-photo__caption">淡い色の重ね着が目立つ来春夏の舞台（ダミー画像）</figcaption>
+        </figure>
+        <figure class="sb-photo" data-sb-x="20" data-sb-w="16" data-sb-y="2" data-sb-span="4">
+          <div class="sb-photo__img ph ph" role="img" aria-label="会場の写真（ダミー）"></div>
+          <figcaption class="sb-photo__caption">運河沿いの会場（ダミー画像）</figcaption>
+        </figure>
+        <article class="sb-article" data-sb-x="20" data-sb-w="16" data-sb-y="6" data-sb-span="2">
+          <h2 class="sb-headline sb-headline--s">素材は軽く、色は淡く</h2>
+          <p>来春夏は、薄い布を重ねる装いが目立った。色は、白に近い淡い色が中心。</p>
+        </article>
+        <article class="sb-article" data-sb-x="36" data-sb-w="15" data-sb-y="2" data-sb-span="6">
+          <p class="sb-kicker">パリ</p>
+          <h2 class="sb-headline sb-headline--l">川の街の布で作る</h2>
+          <p class="sb-dateline">パリ＝服部糸</p>
+          <p>パリの舞台で、あるブランドは、川の街で織られた布を使った服を発表した。</p>
+          <p>織り手の職人が舞台のそでに並び、拍手を受けた。</p>
+          <p>デザイナーは「布の織り目を見せたかった。糸の太さが、服の表情を決める」と話した。</p>
+        </article>
+        <aside class="sb-box" data-sb-x="36" data-sb-w="15" data-sb-y="8" data-sb-span="3">
+          <p class="sb-box__title">ことば</p>
+          <p>コレクション　デザイナーが、次の季節に向けて発表する服の一連の作品。</p>
+        </aside>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="demo.js"></script>
+</body>
+</html>

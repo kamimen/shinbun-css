@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>新聞風ブログの記事ページ — shinbun.css 例</title>
+  <link rel="stylesheet" href="../src/shinbun.css">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <div class="demo-bar">
+    <a href="index.html">← 例の一覧</a>
+    <span>組方向:</span>
+    <button type="button" data-writing="horizontal" aria-pressed="true">横組み</button>
+    <button type="button" data-writing="vertical" aria-pressed="false">縦組み</button>
+    <span>配色:</span>
+    <button type="button" data-theme="light" aria-pressed="true">紙</button>
+    <button type="button" data-theme="dark" aria-pressed="false">夜</button>
+    <span id="overflow-report"></span>
+    <span class="demo-note">人物・団体・出来事はすべて架空です</span>
+  </div>
+
+  <div class="demo-stage">
+    <!-- 新聞風ブログの記事ページ: 段抜きの見出し、リード、写真、本文、関連記事 -->
+    <div class="sb-paper" data-sb-writing="horizontal" style="--sb-dan-h: 6; --sb-fs: 0.95rem">
+      <header class="sb-masthead">
+        <div class="sb-masthead__side"><span>川のまち日記（架空）</span><span>2026年10月7日 水曜日</span></div>
+        <h1 class="sb-masthead__title"><a href="blog-home.html">川のまち日報</a></h1>
+        <div class="sb-masthead__side sb-masthead__side--end"><span>記事ページ</span><span><a href="blog-home.html">← トップへ</a></span></div>
+      </header>
+
+      <main class="sb-page">
+        <article class="sb-article sb-article--lead" data-sb-span="4">
+          <p class="sb-kicker">みどり市</p>
+          <h2 class="sb-headline sb-headline--xl">川のまちの書斎、開館までの道のり</h2>
+          <p class="sb-sub">古い倉庫が、本を読む場所になった</p>
+          <p class="sb-dateline">みどり市＝架空太郎</p>
+          <p class="sb-lead">みどり市の旧運河沿いの煉瓦倉庫が、市民の書斎として開館した。保存を求める声から開館までの道のりを、たどる。</p>
+          <figure class="sb-photo" style="--sb-photo-ratio: 21 / 8">
+            <div class="sb-photo__img ph" role="img" aria-label="開館した倉庫（ダミー）"></div>
+            <figcaption class="sb-photo__caption">開館した煉瓦倉庫の外観（ダミー画像）</figcaption>
+          </figure>
+          <p>倉庫は一九二〇年代に建てられ、かつては川舟で運ばれた穀物を保管していた。市は老朽化を理由に解体を検討していたが、住民団体が保存を求める署名を2万筆集め、方針を転換した。</p>
+          <p>改修の設計を担当した建築家は「古い梁と煉瓦をできるだけ残し、静かに過ごせる場所にしたい」と話す。一階を閲覧室、二階を個人用の執筆席とし、蔵書は寄贈と購入を合わせて3万冊を目指した。</p>
+          <p>工事は十一月に始まった。職人は、傷んだ梁を取り替えず、補強して使った。煉瓦の壁は、汚れを落とすだけにとどめ、百年の時間をそのまま残している。</p>
+          <p>運営は、市民ボランティアが中心になる。司書の資格を持つ職員が常駐し、本の相談に応じる。開館時間は午前九時から午後十時まで、入館は無料だ。</p>
+          <p>開館の日、窓から川が見えた。水面に、倉庫の影が揺れていた。ここで本を読む人が、川の音を聞くのだと思うと、胸が熱くなった。</p>
+          <p class="sb-byline">（架空太郎）</p>
+        </article>
+
+        <aside class="sb-box" data-sb-span="2">
+          <p class="sb-box__title">関連の記事</p>
+          <p><a href="blog-article.html">夜の川沿いを歩く</a><br><a href="blog-article.html">駅弁の冷凍技術</a><br><a href="blog-article.html">本の話：川の記憶</a></p>
+        </aside>
+        <article class="sb-article sb-column" data-sb-span="2">
+          <h2 class="sb-headline sb-headline--s">編集後記</h2>
+          <p>川の音は、本のページをめくる音によく似ている。</p>
+          <p class="sb-byline">（編集部）</p>
+        </article>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="demo.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+name: 機能の要望
+description: こんな面や部品を組みたい
+labels: [enhancement]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: 組みたい面や部品
+      description: 実物の紙面の写真は、著作権に注意して、リンクで示してください
+    validations:
+      required: true

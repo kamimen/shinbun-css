@@ -1,0 +1,27 @@
+name: 表示の不具合
+description: ブラウザで表示が崩れる、期待どおりにならない
+labels: [bug]
+body:
+  - type: input
+    id: browser
+    attributes:
+      label: ブラウザとバージョン
+      placeholder: Firefox 130 / Safari 18 / Chrome 154 など
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: shinbun.css のバージョン
+      placeholder: 0.1.0
+  - type: textarea
+    id: html
+    attributes:
+      label: 最小の HTML
+      description: 崩れを再現できる、最小の HTML を貼ってください
+      render: html
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待した表示と、実際の表示
+      description: スクリーンショットがあれば添付してください

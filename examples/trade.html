@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>横組みの専門紙風 — shinbun.css 例</title>
+  <link rel="stylesheet" href="../src/shinbun.css">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <div class="demo-bar">
+    <a href="index.html">← 例の一覧</a>
+    <span>配色:</span>
+    <button type="button" data-theme="light" aria-pressed="true">紙</button>
+    <button type="button" data-theme="dark" aria-pressed="false">夜</button>
+    <span>配置の目印:</span>
+    <button type="button" data-debug="off" aria-pressed="true">なし</button>
+    <button type="button" data-debug="on" aria-pressed="false">あり</button>
+    <span class="demo-note">企業・人物・出来事はすべて架空です</span>
+  </div>
+
+  <div class="demo-stage">
+    <!-- 横組みの紙面: 段（--sb-dan-h）を横に並べ、記事は --sb-span 段を占める。
+         縦組みと同じ class・同じ変数で書ける -->
+    <div class="sb-paper" data-sb-writing="horizontal" style="--sb-dan-h: 8; --sb-fs: 0.82rem">
+      <header class="sb-masthead">
+        <div class="sb-masthead__side">
+          <span>2026年（令和8年）10月8日 木曜日</span>
+          <span>(5)　特集</span>
+        </div>
+        <h1 class="sb-masthead__title">架空建材新聞</h1>
+        <div class="sb-masthead__side sb-masthead__side--end">
+          <span>第12345号</span>
+          <span>週刊（架空）</span>
+        </div>
+      </header>
+
+      <main class="sb-page">
+
+        <!-- トップ記事: 8段をすべて使う段抜き見出し -->
+        <article class="sb-article sb-article--lead" data-sb-span="8">
+          <h2 class="sb-headline sb-headline--xl">国産材の純木造ビル、4階建てで事務所に</h2>
+          <p class="sb-sub">架空木材産業が新社屋　環境配慮の発信拠点に</p>
+          <figure class="sb-photo" style="--sb-photo-ratio: 21 / 6">
+            <div class="sb-photo__img ph ph--blue" role="img" aria-label="新社屋の外観（ダミー）"></div>
+            <figcaption class="sb-photo__caption">ガラスのカーテンウォールと木の柱が並ぶ新社屋の外観（ダミー画像）</figcaption>
+          </figure>
+          <p class="sb-dateline">みどり市＝建材太郎</p>
+          <p class="sb-lead">架空木材産業（みどり市）は、国産材を主な構造材とした4階建ての事務所ビルを完成させた。純木造の中高層事務所としては、国内でも珍しいという。</p>
+          <p>柱と梁には地元産のスギとヒノキを使った。接合部には金物をできるだけ使わず、職人の手で組み上げる伝統の工法を取り入れている。床面積は約1,800平方メートルで、一階には来訪者が木の質感に触れられる展示室を設けた。</p>
+          <p>設計を担当した水無月花子氏は「木は、建物が建った後も呼吸を続ける材料。その変化を楽しめる空間にした」と話す。社長の月見草太氏は「脱炭素の取り組みを、形にして見せたかった」と語った。</p>
+          <p>同社は今後、ビルの見学会を月1回開く予定。建築関係者や学生の来場を見込む。</p>
+          <p class="sb-byline">（建材太郎）</p>
+        </article>
+
+        <article class="sb-article" data-sb-span="3">
+          <p class="sb-kicker">インタビュー</p>
+          <h2 class="sb-headline sb-headline--l">木の建物は、<br>育てる建物</h2>
+          <figure class="sb-photo" style="--sb-photo-ratio: 4 / 3">
+            <div class="sb-photo__img ph" role="img" aria-label="社長の顔写真（ダミー）"></div>
+            <figcaption class="sb-photo__caption">月見草太社長（ダミー画像）</figcaption>
+          </figure>
+          <p>新社屋に込めた思いを聞いた。「環境にやさしい」と言うだけでは伝わらない。実際に入って、木の香りを感じてもらうのが一番早いと考えた。</p>
+          <p>職人の高齢化は大きな課題で、若い世代に技を伝える場にもしたい。見学会では、組み方の実演も行う予定だ。</p>
+        </article>
+
+        <article class="sb-article" data-sb-span="3">
+          <p class="sb-kicker">解説</p>
+          <h2 class="sb-headline sb-headline--l">中高層の木造、<br>なぜ今</h2>
+          <p>木造の中高層ビルが増えている背景には、国産材の利用拡大を促す政策と、脱炭素への関心の高まりがある。</p>
+          <p>かつて木造は火に弱いと考えられていたが、燃えしろを見込んだ設計や、防火被覆の技術が進み、耐火性能を確保できるようになった。</p>
+          <p>課題はコストと担い手である。大きな断面の木材は割高で、設計や施工に慣れた技術者も限られる。</p>
+          <aside class="sb-box">
+            <p class="sb-box__title">ポイント</p>
+            <p>・構造材は地元産のスギ・ヒノキ<br>・4階建て、延べ約1,800平方メートル<br>・見学会は月1回</p>
+          </aside>
+        </article>
+
+        <article class="sb-article sb-column" data-sb-span="2">
+          <h2 class="sb-headline sb-headline--m">編集後記</h2>
+          <p>木の建物に入ると、なぜか声が小さくなる。静かな場所が、まちに一つ増えたようでうれしい。</p>
+          <p class="sb-byline">（編集部）</p>
+        </article>
+
+        <div class="sb-ad" data-sb-span="8" style="min-block-size: 6rem">広告（ダミー）</div>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="demo.js"></script>
+</body>
+</html>

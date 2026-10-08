@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>囲碁・将棋面 — shinbun.css 例</title>
+  <link rel="stylesheet" href="../src/shinbun.css">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <div class="demo-bar">
+    <a href="index.html">← 例の一覧</a>
+    <span>配色:</span>
+    <button type="button" data-theme="light" aria-pressed="true">紙</button>
+    <button type="button" data-theme="dark" aria-pressed="false">夜</button>
+    <span>配置の目印:</span>
+    <button type="button" data-debug="off" aria-pressed="true">なし</button>
+    <button type="button" data-debug="on" aria-pressed="false">あり</button>
+    <span id="overflow-report"></span>
+    <span class="demo-note">人物・団体・出来事はすべて架空です</span>
+  </div>
+
+  <div class="demo-stage">
+    <!-- 囲碁・将棋面: 「棋譜と解説で楽しむ白熱の勝負」。碁盤や将棋盤の図（図は表で組む）と解説を並べる例。碁盤の図は、画像検索で見た碁盤図（座標つき、手順の番号つき）を参考にした架空の局面 -->
+    <div class="sb-paper" data-sb-writing="vertical" data-sb-auto-tcy
+         style="--sb-dan: 10; --sb-chars: 10; --sb-lines: 50; --sb-fs: 0.72rem">
+      <div class="sb-folio">
+        <span><span class="sb-folio__section">15面</span> 囲碁・将棋</span>
+        <span>架空新聞　2026年10月8日 木曜日</span>
+      </div>
+
+      <main class="sb-page sb-page--grid">
+
+        <h2 class="sb-yoko sb-yoko--reverse" data-sb-x="1" data-sb-w="50" data-sb-y="1" data-sb-span="1" style="font-size: 1.3em">囲碁</h2>
+        <article class="sb-article sb-article--lead" data-sb-x="1" data-sb-w="12" data-sb-y="2" data-sb-span="6">
+          <p class="sb-kicker">名人戦</p>
+          <h2 class="sb-headline sb-headline--l">挑戦者、<br>逆転で先勝</h2>
+          <p class="sb-sleeve">右下の攻防が勝負を分ける</p>
+          <p class="sb-dateline">対局の記録</p>
+          <p class="sb-lead">名人戦七番勝負の第一局は、白番の挑戦者が終盤に逆転して先勝した。</p>
+          <p>七番勝負の第一局は、挑戦者が白番で、終盤に逆転して先勝した。</p>
+          <p>中盤まで黒が優勢だったが、白が右下の攻防で一手早く守り、形勢が入れ替わった。</p>
+          <p>対局後、挑戦者は「負けにくい手を選び続けた」と話した。</p>
+        </article>
+        <table class="sb-table board" data-sb-x="13" data-sb-w="14" data-sb-y="2" data-sb-span="4">
+          <caption>第1図　白20まで（架空・部分図）</caption>
+          <thead><tr><th scope="col"></th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th><th scope="col">4</th><th scope="col">5</th><th scope="col">6</th><th scope="col">7</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">一</th><td></td><td></td><td></td><td>●</td><td></td><td></td><td></td></tr>
+            <tr><th scope="row">二</th><td></td><td>○</td><td>●</td><td></td><td>○</td><td></td><td></td></tr>
+            <tr><th scope="row">三</th><td></td><td>●</td><td>○</td><td>○</td><td></td><td></td><td></td></tr>
+            <tr><th scope="row">四</th><td></td><td></td><td>●</td><td></td><td>●</td><td></td><td></td></tr>
+            <tr><th scope="row">五</th><td></td><td></td><td></td><td>○</td><td></td><td></td><td></td></tr>
+            <tr><th scope="row">六</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><th scope="row">七</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+        <aside class="sb-box" data-sb-x="13" data-sb-w="14" data-sb-y="6" data-sb-span="2">
+          <p class="sb-box__title">対局の記録</p>
+          <p>持ち時間は各八時間。白番の挑戦者が、二百十手で勝った。</p>
+        </aside>
+        <h2 class="sb-yoko sb-yoko--reverse" data-sb-x="27" data-sb-w="24" data-sb-y="1" data-sb-span="1" style="font-size: 1.3em">将棋</h2>
+        <article class="sb-article" data-sb-x="27" data-sb-w="10" data-sb-y="2" data-sb-span="3">
+          <p class="sb-kicker">叡王戦</p>
+          <h2 class="sb-headline sb-headline--m">終盤、飛車を<br>打って勝ち</h2>
+          <p class="sb-dateline">対局の記録</p>
+          <p>挑戦者は、一手差の終盤で、飛車を打って王手をかけ、勝ちを決めた。</p>
+        </article>
+        <table class="sb-table board" data-sb-x="37" data-sb-w="14" data-sb-y="2" data-sb-span="5">
+          <caption>第1図　初手まえ（架空）</caption>
+          <thead><tr><th scope="col">9</th><th scope="col">8</th><th scope="col">7</th><th scope="col">6</th><th scope="col">5</th><th scope="col">4</th><th scope="col">3</th><th scope="col">2</th><th scope="col">1</th><th scope="col"></th></tr></thead>
+          <tbody>
+            <tr><td><span class="gote">香</span></td><td><span class="gote">桂</span></td><td><span class="gote">銀</span></td><td><span class="gote">金</span></td><td><span class="gote">王</span></td><td><span class="gote">金</span></td><td><span class="gote">銀</span></td><td><span class="gote">桂</span></td><td><span class="gote">香</span></td><th scope="row">一</th></tr>
+            <tr><td></td><td><span class="gote">飛</span></td><td></td><td></td><td></td><td></td><td></td><td><span class="gote">角</span></td><td></td><th scope="row">二</th></tr>
+            <tr><td><span class="gote">歩</span></td><td><span class="gote">歩</span></td><td><span class="gote">歩</span></td><td><span class="gote">歩</span></td><td><span class="gote">歩</span></td><td><span class="gote">歩</span></td><td><span class="gote">歩</span></td><td><span class="gote">歩</span></td><td><span class="gote">歩</span></td><th scope="row">三</th></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th scope="row">四</th></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th scope="row">五</th></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th scope="row">六</th></tr>
+            <tr><td>歩</td><td>歩</td><td>歩</td><td>歩</td><td>歩</td><td>歩</td><td>歩</td><td>歩</td><td>歩</td><th scope="row">七</th></tr>
+            <tr><td></td><td>角</td><td></td><td></td><td></td><td></td><td></td><td>飛</td><td></td><th scope="row">八</th></tr>
+            <tr><td>香</td><td>桂</td><td>銀</td><td>金</td><td>玉</td><td>金</td><td>銀</td><td>桂</td><td>香</td><th scope="row">九</th></tr>
+          </tbody>
+        </table>
+        <article class="sb-article" data-sb-x="27" data-sb-w="10" data-sb-y="5" data-sb-span="3">
+          <p class="sb-kicker">解説</p>
+          <h2 class="sb-headline sb-headline--s">この一手の意味</h2>
+          <p>飛車を打つ手は、相手の玉の逃げ道をふさぐ。受けにくい形になった。</p>
+        </article>
+        <aside class="sb-box" data-sb-x="37" data-sb-w="14" data-sb-y="7" data-sb-span="1">
+          <p class="sb-box__title">対局の記録</p>
+          <p>持ち時間は各四時間。先手が百三手で勝った。</p>
+        </aside>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="demo.js"></script>
+</body>
+</html>

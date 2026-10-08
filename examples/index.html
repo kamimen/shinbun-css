@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>shinbun.css の例の一覧</title>
+  <meta name="description" content="日本の新聞の紙面を組むための CSS。縦組み・横組み、段組み、段抜きの見出し、題字、広告枠、表を、HTML と CSS だけで書けます。依存するライブラリはありません。">
+  <link rel="canonical" href="https://kamimen.github.io/shinbun-css/examples/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="shinbun.css">
+  <meta property="og:title" content="shinbun.css の例の一覧">
+  <meta property="og:description" content="日本の新聞の紙面を組むための CSS。縦組み・横組み、段組み、段抜きの見出し、題字、広告枠、表を、HTML と CSS だけで書けます。依存するライブラリはありません。">
+  <meta property="og:url" content="https://kamimen.github.io/shinbun-css/examples/">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="https://kamimen.github.io/shinbun-css/docs/images/og-ja.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="shinbun.css のアイコンと、日本の新聞の紙面を組むための CSS という説明">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../src/shinbun.css">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <div class="demo-stage">
+    <!-- この一覧ページも、shinbun.css で組んでいる。記事をクリックすると、その例へ移る -->
+    <div class="sb-paper" data-sb-writing="vertical" data-sb-auto-tcy
+         style="--sb-dan: 15; --sb-chars: 10; --sb-lines: 50; --sb-fs: 0.72rem">
+      <div class="sb-folio">
+        <span><span class="sb-folio__section">例</span> shinbun.css の見本帖</span>
+        <span>この一覧も shinbun.css で組んでいます</span>
+      </div>
+
+      <main class="sb-page sb-page--grid">
+
+        <header class="sb-nameplate" data-sb-x="1" data-sb-w="8" data-sb-y="1" data-sb-span="3">
+          <h1 class="sb-nameplate__title">紙面見本</h1>
+          <p class="sb-nameplate__meta">例の一覧<br>（すべて架空）</p>
+        </header>
+
+        <aside class="sb-box" data-sb-x="1" data-sb-w="8" data-sb-y="4" data-sb-span="4">
+          <p class="sb-box__title">見方</p>
+          <p>記事（見出し）をクリックすると、その例へ移ります。縦組みの紙面は横にスクロールします。</p>
+        </aside>
+
+        <aside class="sb-box" data-sb-x="1" data-sb-w="8" data-sb-y="8" data-sb-span="5">
+          <p class="sb-box__title">この一覧について</p>
+          <p>このページの HTML は、<span class="sb-sideways">examples/index.html</span> にあります。記事の位置は、<span class="sb-sideways">data-sb-x / w / y / span</span> で書いています。</p>
+        </aside>
+
+        <article class="sb-article gallery-item sb-article--lead" data-sb-x="9" data-sb-w="16" data-sb-y="1" data-sb-span="3">
+          <p class="sb-kicker">はじめに</p>
+          <h2 class="sb-headline sb-headline--l"><a href="starter.html">素の <span class="sb-sideways">HTML</span> だけで、一枚</a></h2>
+          <p>クラスは紙面と紙面領域だけ。あとは記事・見出し・写真・囲みの素の要素と、属性で組む、最小の例。</p>
+        </article>
+        <article class="sb-article gallery-item" data-sb-x="25" data-sb-w="9" data-sb-y="1" data-sb-span="3">
+          <p class="sb-kicker">1面</p>
+          <h2 class="sb-headline sb-headline--s"><a href="front.html">一面</a></h2>
+          <p>縦題字、反転の横見出し、写真、囲みの列、記事下広告。</p>
+        </article>
+        <article class="sb-article gallery-item" data-sb-x="34" data-sb-w="9" data-sb-y="1" data-sb-span="3">
+          <p class="sb-kicker">社会面</p>
+          <h2 class="sb-headline sb-headline--s"><a href="society.html">社会面</a></h2>
+          <p>パトロール、図書コーナー。記事を多く並べる面。</p>
+        </article>
+        <article class="sb-article gallery-item" data-sb-x="43" data-sb-w="8" data-sb-y="1" data-sb-span="3">
+          <p class="sb-kicker">スポーツ面</p>
+          <h2 class="sb-headline sb-headline--s"><a href="sports.html">スポーツ面</a></h2>
+          <p>大きな写真、反転の見出し、結果と順位の表。</p>
+        </article>
+
+        <h2 class="sb-yoko sb-yoko--reverse" data-sb-x="9" data-sb-w="42" data-sb-y="4" data-sb-span="1" style="font-size: 1.5em">縦組みの面</h2>
+
+        <article class="sb-article gallery-item" data-sb-x="9" data-sb-w="9" data-sb-y="5" data-sb-span="3">
+          <p class="sb-kicker">国際面</p>
+          <h2 class="sb-headline sb-headline--s"><a href="international.html">国際面</a></h2>
+          <p>国境の橋の記事に、用語メモの囲み。</p>
+        </article>
+        <article class="sb-article gallery-item" data-sb-x="18" data-sb-w="9" data-sb-y="5" data-sb-span="3">
+          <p class="sb-kicker">文化・読書面</p>
+          <h2 class="sb-headline sb-headline--s"><a href="culture.html">文化・読書面</a></h2>
+          <p>朗読会、書評、連載、新刊の囲み。</p>
+        </article>
+        <article class="sb-article gallery-item" data-sb-x="27" data-sb-w="8" data-sb-y="5" data-sb-span="3">
+          <p class="sb-kicker">オピニオン</p>
+          <h2 class="sb-headline sb-headline--s"><a href="editorial.html">社説面</a></h2>
+          <p>社説、論説、読者の声。本文が主役の面。</p>
+        </article>
+        <article class="sb-article gallery-item" data-sb-x="35" data-sb-w="8" data-sb-y="5" data-sb-span="3">
+          <p class="sb-kicker">経済・金融情報</p>
+          <h2 class="sb-headline sb-headline--s"><a href="market.html">市況面</a></h2>
+          <p>記事と、桁をそろえた数値の表。</p>
+        </article>
+        <article class="sb-article gallery-item" data-sb-x="43" data-sb-w="8" data-sb-y="5" data-sb-span="3">
+          <p class="sb-kicker">テレビ・ラジオ</p>
+          <h2 class="sb-headline sb-headline--s"><a href="tv.html">テレビ欄</a></h2>
+          <p>縦組みの紙面の中の、横組みの番組表。</p>
+        </article>
+
+        <h2 class="sb-yoko sb-yoko--reverse" data-sb-x="9" data-sb-w="42" data-sb-y="8" data-sb-span="1" style="font-size: 1.5em">ほかの形</h2>
+
+        <article class="sb-article gallery-item" data-sb-x="9" data-sb-w="7" data-sb-y="9" data-sb-span="3">
+          <p class="sb-kicker">広告</p>
+          <h2 class="sb-headline sb-headline--s"><a href="ad.html">全面広告</a></h2>
+          <p>紙面の全段・全行を使う広告枠。</p>
+        </article>
+        <article class="sb-article gallery-item" data-sb-x="16" data-sb-w="7" data-sb-y="9" data-sb-span="3">
+          <p class="sb-kicker">横組み</p>
+          <h2 class="sb-headline sb-headline--s"><a href="trade.html">専門紙風</a></h2>
+          <p>横題字、段抜きの横見出し、写真。</p>
+        </article>
+        <article class="sb-article gallery-item" data-sb-x="23" data-sb-w="7" data-sb-y="9" data-sb-span="3">
+          <p class="sb-kicker">簡易</p>
+          <h2 class="sb-headline sb-headline--s"><a href="flow.html">位置指定なし</a></h2>
+          <p>座標を指定せず、順に詰める書き方。</p>
+        </article>
+        <article class="sb-article gallery-item" data-sb-x="30" data-sb-w="7" data-sb-y="9" data-sb-span="3">
+          <p class="sb-kicker">号外</p>
+          <h2 class="sb-headline sb-headline--s"><a href="extra.html">号外</a></h2>
+          <p>通し番号のない臨時発行の紙面。</p>
+        </article>
+        <article class="sb-article gallery-item" data-sb-x="37" data-sb-w="7" data-sb-y="9" data-sb-span="3">
+          <p class="sb-kicker">ブログ</p>
+          <h2 class="sb-headline sb-headline--s"><a href="blog-home.html">ブログのトップ</a></h2>
+          <p>横組みの記事一覧。</p>
+        </article>
+        <article class="sb-article gallery-item" data-sb-x="44" data-sb-w="7" data-sb-y="9" data-sb-span="3">
+          <p class="sb-kicker">ブログ</p>
+          <h2 class="sb-headline sb-headline--s"><a href="blog-article.html">ブログの記事</a></h2>
+          <p>段抜きの見出しと本文。</p>
+        </article>
+        <h2 class="sb-yoko sb-yoko--reverse" data-sb-x="9" data-sb-w="42" data-sb-y="12" data-sb-span="1" style="font-size: 1.5em">文字より、図や作品が主役の面</h2>
+
+        <article class="sb-article gallery-item" data-sb-x="9" data-sb-w="14" data-sb-y="13" data-sb-span="3">
+          <p class="sb-kicker">歌壇・俳壇</p>
+          <h2 class="sb-headline sb-headline--s"><a href="kadan.html">歌壇・俳壇面</a></h2>
+          <p>中央の題字と挿絵、選者ごとの入選作と評。</p>
+        </article>
+        <article class="sb-article gallery-item" data-sb-x="23" data-sb-w="14" data-sb-y="13" data-sb-span="3">
+          <p class="sb-kicker">囲碁・将棋</p>
+          <h2 class="sb-headline sb-headline--s"><a href="igo-shogi.html">囲碁・将棋面</a></h2>
+          <p>碁盤と将棋盤の図を、表で組む。解説と対局の記録。</p>
+        </article>
+        <article class="sb-article gallery-item" data-sb-x="37" data-sb-w="14" data-sb-y="13" data-sb-span="3">
+          <p class="sb-kicker">ファッション</p>
+          <h2 class="sb-headline sb-headline--s"><a href="fashion.html">ファッション面</a></h2>
+          <p>写真を大きく使い、短い記事を添える。</p>
+        </article>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="../src/shinbun.js"></script>
+</body>
+</html>

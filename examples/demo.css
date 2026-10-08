@@ -1,0 +1,25 @@
+/* 例のページ共通の見た目（shinbun.css の一部ではない） */
+body { margin: 0; background: #d9d2bf; font-family: system-ui, sans-serif; }
+.demo-bar { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; padding: .6rem 1rem; background: #2b2820; color: #eee6d2; font-size: .85rem; }
+.demo-bar a { color: inherit; }
+.demo-bar button { font: inherit; padding: .25rem .8rem; border: 1px solid #eee6d2; background: transparent; color: inherit; border-radius: 4px; cursor: pointer; }
+.demo-bar button[aria-pressed="true"] { background: #eee6d2; color: #2b2820; }
+.demo-bar .demo-note { margin-inline-start: auto; opacity: .75; }
+.demo-stage { padding: 1rem; }
+.demo-stage .sb-paper { max-width: 1500px; margin-inline: auto; padding: 1rem 1.2rem 1.4rem; box-shadow: 0 4px 24px rgb(0 0 0 / .25); }
+.demo-stage .sb-page { margin-left: auto; margin-right: auto; } /* 縦組みの要素では margin-inline が天地になるので、物理指定にする */
+/* 写真のダミー（実際の紙面では <img> を使う） */
+.ph { background: linear-gradient(135deg, #bdb39a, #8e856f); }
+.ph--green { background: linear-gradient(160deg, #a9b3a4, #6f7d6c); }
+.ph--blue { background: linear-gradient(160deg, #9fb0bf, #5f7389); }
+
+/* 例の一覧: 記事のどこをクリックしても移動できる（見出しのリンクを、記事全体に広げる） */
+.gallery-item { cursor: pointer; transition: background-color .15s; }
+.gallery-item a::after { content: ""; position: absolute; inset: 0; }
+.gallery-item:hover { background-color: color-mix(in srgb, var(--sb-ink) 8%, transparent); }
+.gallery-item:focus-within { outline: 2px solid var(--sb-accent); outline-offset: 3px; }
+.gallery-item a { text-decoration: none; }
+
+/* 囲碁・将棋の図: 升目の中央に石や駒を置く（デモ用） */
+.board td, .board th { text-align: center; padding: 0.1em 0.2em; }
+.board .gote { display: inline-block; transform: rotate(180deg); }

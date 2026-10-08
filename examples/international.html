@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>国際面 — shinbun.css 例</title>
+  <link rel="stylesheet" href="../src/shinbun.css">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <div class="demo-bar">
+    <a href="index.html">← 例の一覧</a>
+    <span>配色:</span>
+    <button type="button" data-theme="light" aria-pressed="true">紙</button>
+    <button type="button" data-theme="dark" aria-pressed="false">夜</button>
+    <span>配置の目印:</span>
+    <button type="button" data-debug="off" aria-pressed="true">なし</button>
+    <button type="button" data-debug="on" aria-pressed="false">あり</button>
+    <span id="overflow-report"></span>
+    <span class="demo-note">人物・団体・出来事はすべて架空です</span>
+  </div>
+
+  <div class="demo-stage">
+    <div class="sb-paper" data-sb-writing="vertical" data-sb-auto-tcy
+         style="--sb-dan: 10; --sb-chars: 10; --sb-lines: 50; --sb-fs: 0.72rem">
+      <div class="sb-folio">
+        <span><span class="sb-folio__section">7面</span> 国際</span>
+        <span>架空新聞　2026年10月8日 木曜日</span>
+      </div>
+
+      <main class="sb-page sb-page--grid">
+
+        <article class="sb-article sb-article--lead" data-sb-x="1" data-sb-w="18" data-sb-y="1" data-sb-span="6">
+          <p class="sb-kicker">架空連邦</p>
+          <h2 class="sb-headline sb-headline--l">国境の橋、<br>十年ぶりに再開</h2>
+          <p class="sb-sleeve">両国の首脳が式典</p>
+          <p class="sb-dateline">北橋市＝海外特派員</p>
+          <p class="sb-lead">架空連邦と隣国を結ぶ国境の橋が、十年ぶりに開通した。両国の首脳が出席して、式典が開かれた。</p>
+          <p>橋は、国境の川に架かる全長300メートルで、歩行者と車の通行が再開される。両国は、貿易の拡大と、人の往来の回復を目指す。</p>
+          <p>式典で首脳は「橋は、互いの信頼の証しだ」と述べた。一方で、通関の手続きの簡素化など、課題も残る。</p>
+        </article>
+
+        <figure class="sb-photo" data-sb-x="19" data-sb-w="11" data-sb-y="1" data-sb-span="4">
+          <div class="sb-photo__img ph" role="img" aria-label="再開された橋（ダミー）"></div>
+          <figcaption class="sb-photo__caption">再開された国境の橋。首脳が歩いて渡った（ダミー画像）</figcaption>
+        </figure>
+
+        <aside class="sb-box" data-sb-x="19" data-sb-w="11" data-sb-y="5" data-sb-span="2">
+          <p class="sb-box__title">用語メモ</p>
+          <p>通関　貨物が国境を越えるときの手続き。</p>
+        </aside>
+
+        <article class="sb-article" data-sb-x="30" data-sb-w="11" data-sb-y="1" data-sb-span="4">
+          <p class="sb-kicker">南の島国</p>
+          <h2 class="sb-headline sb-headline--m">港の整備で合意</h2>
+          <p class="sb-dateline">港町＝海外特派員</p>
+          <p>南の島国と架空連邦は、新しい港の整備で合意した。完成は三年後を見込む。</p>
+        </article>
+        <article class="sb-article" data-sb-x="30" data-sb-w="11" data-sb-y="5" data-sb-span="2">
+          <h2 class="sb-headline sb-headline--s">為替、小動き</h2>
+          <p>主要通貨は、小幅な動きにとどまった。</p>
+        </article>
+
+        <article class="sb-article" data-sb-x="41" data-sb-w="10" data-sb-y="1" data-sb-span="3">
+          <p class="sb-kicker">西の国</p>
+          <h2 class="sb-headline sb-headline--m">議会、予算を可決</h2>
+          <p>西の国の議会は、来年度の予算案を可決した。</p>
+        </article>
+        <article class="sb-article sb-column" data-sb-x="41" data-sb-w="10" data-sb-y="4" data-sb-span="3">
+          <h2 class="sb-headline sb-headline--s">世界の窓</h2>
+          <p>橋を渡る人々の足取りは、軽かった。</p>
+          <p class="sb-byline">（特派員）</p>
+        </article>
+
+        <div class="sb-ad sb-ad--kijishita" data-sb-x="1" data-sb-w="50" data-sb-span="3">広告（ダミー）</div>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="demo.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>スポーツ面 — shinbun.css 例</title>
+  <link rel="stylesheet" href="../src/shinbun.css">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <div class="demo-bar">
+    <a href="index.html">← 例の一覧</a>
+    <span>配色:</span>
+    <button type="button" data-theme="light" aria-pressed="true">紙</button>
+    <button type="button" data-theme="dark" aria-pressed="false">夜</button>
+    <span>配置の目印:</span>
+    <button type="button" data-debug="off" aria-pressed="true">なし</button>
+    <button type="button" data-debug="on" aria-pressed="false">あり</button>
+    <span id="overflow-report"></span>
+    <span class="demo-note">人物・団体・出来事はすべて架空です</span>
+  </div>
+
+  <div class="demo-stage">
+    <div class="sb-paper" data-sb-writing="vertical" data-sb-auto-tcy
+         style="--sb-dan: 10; --sb-chars: 10; --sb-lines: 50; --sb-fs: 0.72rem">
+      <div class="sb-folio">
+        <span><span class="sb-folio__section">18面</span> スポーツ</span>
+        <span>架空新聞　2026年10月8日 木曜日</span>
+      </div>
+
+      <main class="sb-page sb-page--grid">
+
+        <h1 class="sb-yoko sb-yoko--reverse" data-sb-x="1" data-sb-w="36" data-sb-y="1" data-sb-span="2">みどり川クラブ、逆転で初優勝</h1>
+
+        <figure class="sb-photo" data-sb-x="1" data-sb-w="22" data-sb-y="3" data-sb-span="5">
+          <div class="sb-photo__img ph ph--green" role="img" aria-label="優勝の瞬間（ダミー）"></div>
+          <figcaption class="sb-photo__caption">優勝を決め、抱き合う選手たち（ダミー画像）</figcaption>
+        </figure>
+
+        <article class="sb-article sb-article--lead" data-sb-x="23" data-sb-w="14" data-sb-y="3" data-sb-span="5">
+          <p class="sb-kicker">サッカー</p>
+          <h2 class="sb-headline sb-headline--l">土壇場の一発</h2>
+          <p class="sb-dateline">みどり市＝球田蹴太</p>
+          <p class="sb-lead">みどり川クラブが、最終節で逆転し、初めてリーグ優勝を決めた。</p>
+          <p>0対1で迎えた後半の終盤、途中出場の月見選手が同点ゴールを決め、さらにロスタイムに勝ち越した。スタンドは大きな歓声に包まれた。</p>
+          <p>監督は「最後まで走り続けた選手を誇りに思う」と話した。</p>
+        </article>
+
+        <table class="sb-table" data-sb-x="37" data-sb-w="14" data-sb-y="1" data-sb-span="4">
+          <caption>最終節の結果（架空）</caption>
+          <thead><tr><th scope="col">対戦</th><th scope="col" class="sb-num">得点</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">みどり川 − 朝凪</th><td class="sb-num">2−1</td></tr>
+            <tr><th scope="row">ひなた − 書斎堂</th><td class="sb-num">0−0</td></tr>
+            <tr><th scope="row">煉瓦 − 窓辺</th><td class="sb-num">3−2</td></tr>
+            <tr><th scope="row">運河 − 夕映</th><td class="sb-num">1−2</td></tr>
+          </tbody>
+        </table>
+
+        <table class="sb-table" data-sb-x="37" data-sb-w="14" data-sb-y="5" data-sb-span="3">
+          <caption>最終順位（架空）</caption>
+          <thead><tr><th scope="col">順位</th><th scope="col">クラブ</th><th scope="col" class="sb-num">勝点</th></tr></thead>
+          <tbody>
+            <tr><td class="sb-num">1</td><th scope="row">みどり川</th><td class="sb-num">71</td></tr>
+            <tr><td class="sb-num">2</td><th scope="row">朝凪</th><td class="sb-num">70</td></tr>
+            <tr><td class="sb-num">3</td><th scope="row">煉瓦</th><td class="sb-num">64</td></tr>
+          </tbody>
+        </table>
+
+        <article class="sb-article" data-sb-x="1" data-sb-w="17" data-sb-y="8" data-sb-span="3">
+          <p class="sb-kicker">バスケット</p>
+          <h2 class="sb-headline sb-headline--m">書斎堂、五連勝</h2>
+          <p>書斎堂は、守りで主導権を握り、五連勝を飾った。</p>
+        </article>
+        <article class="sb-article" data-sb-x="18" data-sb-w="19" data-sb-y="8" data-sb-span="3">
+          <p class="sb-kicker">陸上</p>
+          <h2 class="sb-headline sb-headline--m">川のまちマラソン、来月</h2>
+          <p>参加者は約2千人。コースは、運河沿いを折り返す。</p>
+        </article>
+        <article class="sb-article sb-column" data-sb-x="37" data-sb-w="14" data-sb-y="8" data-sb-span="3">
+          <h2 class="sb-headline sb-headline--s">スポーツ余話</h2>
+          <p>優勝の夜、スタンドの片付けは、ファンが自主的に手伝った。</p>
+        </article>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="demo.js"></script>
+</body>
+</html>

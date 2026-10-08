@@ -1,0 +1,64 @@
+{
+  "name": "shinbun-css",
+  "version": "0.1.0",
+  "description": "日本の新聞紙面（縦組み・段組み・段抜き見出し）のための、依存なしの CSS。CSS for Japanese newspaper layout: vertical writing, dan (column) grid, and column-spanning headlines.",
+  "author": "kiwamizamurai",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamimen/shinbun-css.git"
+  },
+  "homepage": "https://kamimen.github.io/shinbun-css/",
+  "bugs": {
+    "url": "https://github.com/kamimen/shinbun-css/issues"
+  },
+  "type": "module",
+  "style": "dist/shinbun.min.css",
+  "main": "dist/shinbun.js",
+  "exports": {
+    ".": {
+      "style": "./dist/shinbun.min.css",
+      "default": "./dist/shinbun.js"
+    },
+    "./css": "./dist/shinbun.css",
+    "./css/min": "./dist/shinbun.min.css",
+    "./js": "./dist/shinbun.js",
+    "./src/*": "./src/*"
+  },
+  "files": [
+    "dist",
+    "src",
+    "docs",
+    "examples"
+  ],
+  "sideEffects": [
+    "./dist/shinbun.js"
+  ],
+  "scripts": {
+    "gen": "node scripts/gen.mjs",
+    "build": "node scripts/gen.mjs && node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node scripts/check.mjs && node --test scripts/test.mjs",
+    "serve": "python3 -m http.server 5180 --bind 127.0.0.1",
+    "prepublishOnly": "npm test && npm run build"
+  },
+  "keywords": [
+    "css",
+    "css-framework",
+    "newspaper",
+    "japanese",
+    "vertical-writing",
+    "tategaki",
+    "writing-mode",
+    "multi-column",
+    "typography",
+    "jlreq",
+    "日本語",
+    "新聞",
+    "縦書き",
+    "組版"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
