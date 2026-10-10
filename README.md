@@ -48,6 +48,19 @@ The optional JavaScript (tate-chu-yoko for 2-digit numbers, writing-direction sw
 
 `@v0.1.0` in the URL is the version to load. Pin it, and the display will not change when a newer version comes out. To host the files yourself, copy `dist/shinbun.min.css` from the repository.
 
+### From npm
+
+```sh
+npm install shinbun-css
+```
+
+```js
+import "shinbun-css/css/min";            // the minified stylesheet (also "shinbun-css/css")
+import { autoTcy } from "shinbun-css/js"; // the optional script
+```
+
+The files are also on jsDelivr from npm: `https://cdn.jsdelivr.net/npm/shinbun-css@0.1.0/dist/shinbun.min.css`.
+
 ### Tiling rectangles with coordinates
 
 To tile articles into rectangles like a real newspaper (block layout), add `sb-page--grid` to `.sb-page` and give each element a position and a size.

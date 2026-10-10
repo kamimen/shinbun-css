@@ -46,6 +46,19 @@ CSS を読み込み、紙面を書きます。クラスは、紙面の根 `.sb-p
 
 URL の `@v0.1.0` は、読み込むバージョンです。固定しておくと、あとで更新されても表示が変わりません。自分のサーバーに置く場合は、リポジトリの `dist/shinbun.min.css` をコピーしてください。
 
+### npm から使う
+
+```sh
+npm install shinbun-css
+```
+
+```js
+import "shinbun-css/css/min";            // 最小化した CSS（"shinbun-css/css" もある）
+import { autoTcy } from "shinbun-css/js"; // 任意のスクリプト
+```
+
+npm 経由で jsDelivr からも読み込めます: `https://cdn.jsdelivr.net/npm/shinbun-css@0.1.0/dist/shinbun.min.css`
+
 ### 座標指定で、長方形に敷き詰める
 
 実際の新聞のように、記事を長方形に敷き詰める（ブロック組みにする）には、`.sb-page` に `sb-page--grid` を重ね、各要素に位置と大きさを指定します。

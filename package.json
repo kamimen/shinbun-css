@@ -13,6 +13,9 @@
     "url": "https://github.com/kamimen/shinbun-css/issues"
   },
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "style": "dist/shinbun.min.css",
   "main": "dist/shinbun.js",
   "exports": {
