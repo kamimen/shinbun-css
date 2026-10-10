@@ -51,15 +51,15 @@ The optional JavaScript (tate-chu-yoko for 2-digit numbers, writing-direction sw
 ### From npm
 
 ```sh
-npm install shinbun-css
+npm install @kamimen/shinbun-css
 ```
 
 ```js
-import "shinbun-css/css/min";            // the minified stylesheet (also "shinbun-css/css")
-import { autoTcy } from "shinbun-css/js"; // the optional script
+import "@kamimen/shinbun-css/css/min";            // the minified stylesheet (also "@kamimen/shinbun-css/css")
+import { autoTcy } from "@kamimen/shinbun-css/js"; // the optional script
 ```
 
-The files are also on jsDelivr from npm: `https://cdn.jsdelivr.net/npm/shinbun-css@0.1.0/dist/shinbun.min.css`.
+The files are also on jsDelivr from npm: `https://cdn.jsdelivr.net/npm/@kamimen/shinbun-css@0.1.0/dist/shinbun.min.css`.
 
 ### Tiling rectangles with coordinates
 

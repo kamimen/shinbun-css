@@ -49,15 +49,15 @@ URL の `@v0.1.0` は、読み込むバージョンです。固定しておく�
 ### npm から使う
 
 ```sh
-npm install shinbun-css
+npm install @kamimen/shinbun-css
 ```
 
 ```js
-import "shinbun-css/css/min";            // 最小化した CSS（"shinbun-css/css" もある）
-import { autoTcy } from "shinbun-css/js"; // 任意のスクリプト
+import "@kamimen/shinbun-css/css/min";            // 最小化した CSS（"@kamimen/shinbun-css/css" もある）
+import { autoTcy } from "@kamimen/shinbun-css/js"; // 任意のスクリプト
 ```
 
-npm 経由で jsDelivr からも読み込めます: `https://cdn.jsdelivr.net/npm/shinbun-css@0.1.0/dist/shinbun.min.css`
+npm 経由で jsDelivr からも読み込めます: `https://cdn.jsdelivr.net/npm/@kamimen/shinbun-css@0.1.0/dist/shinbun.min.css`
 
 ### 座標指定で、長方形に敷き詰める
 

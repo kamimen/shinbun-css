@@ -38,6 +38,6 @@ npm run serve     # http://127.0.0.1:5180/examples/ で例を見る
 
 ワークフローは npm の Trusted Publishing で公開するので、GitHub に npm のトークンを置きません。
 
-1. 初版だけは手元で公開します（パッケージが存在しないと、Trusted Publisher を登録できないため）: `npm publish`（2FA のコードを聞かれます）
+1. 初版だけは手元で公開します（パッケージが存在しないと、Trusted Publisher を登録できないため）: `npm publish --access public`（2FA のコードを聞かれます。スコープつきのパッケージは、`--access public` を付けないと非公開になります）
 2. npmjs.com でパッケージを開き、Settings の Trusted Publisher で、GitHub Actions、owner `kamimen`、repository `shinbun-css`、workflow `release.yml` を登録します。
 3. 以降は、`v*` のタグを push すると公開されます。
