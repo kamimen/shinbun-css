@@ -1,6 +1,7 @@
 name: Release
 
 # Runs when a v* tag is pushed, including the tag that GitHub creates when you publish a release in the web UI.
+# The package is staged on npm; a maintainer approves it with 2FA (npm stage approve, or Staged Packages on npmjs.com).
 on:
   push:
     tags: ["v*"]
@@ -18,7 +19,6 @@ jobs:
         with:
           node-version: 24
           registry-url: https://registry.npmjs.org
-      # Trusted publishing needs npm 11.5.1 or later
       - run: npm install -g npm@latest
       - name: tag must match package.json
         run: test "v$(node -p "require('./package.json').version")" = "${GITHUB_REF_NAME}"
@@ -26,15 +26,15 @@ jobs:
       - run: npm run build
       - name: dist must be committed
         run: git diff --exit-code -- dist
-      - name: publish to npm
+      - name: stage on npm
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           spec="$(node -p "require('./package.json').name")@$(node -p "require('./package.json').version")"
           if npm view "$spec" version > /dev/null 2>&1; then
-            echo "$spec is already on npm; skipping publish"
+            echo "$spec is already on npm; skipping"
           else
-            npm publish --provenance --access public --ignore-scripts
+            npm stage publish --provenance --access public --ignore-scripts
           fi
       - uses: softprops/action-gh-release@v2
         with:

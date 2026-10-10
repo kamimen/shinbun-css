@@ -32,12 +32,13 @@ npm run serve     # http://127.0.0.1:5180/examples/ で例を見る
 
 1. `package.json` の `version` と `CHANGELOG.md` の見出しを更新し、`npm run build` の結果（`dist/`）もコミットします。
 2. タグを付けて push します: `git tag vX.Y.Z && git push origin main vX.Y.Z`
-3. Release のワークフローが、タグと `package.json` の版が同じことを確かめ、テストを通し、provenance つきで npm に公開し、GitHub の Release を作ります。
+3. Release のワークフローが、タグと `package.json` の版が同じことを確かめ、テストを通し、provenance つきで npm に**ステージ**（公開前の保留）し、GitHub の Release を作ります。
+4. 保留されたパッケージを、2FA で承認します: `npm stage list @kamimen/shinbun-css` のあと `npm stage approve <stage-id>`（npmjs.com の Staged Packages でも承認できます）。承認すると、はじめて npm に公開されます。
 
-### npm の初回設定（トークンは不要）
+### npm の設定
 
-ワークフローは npm の Trusted Publishing で公開するので、GitHub に npm のトークンを置きません。
+ワークフローは、GitHub のシークレット `NPM_TOKEN` に入れた granular access token でステージします。npmjs.com で、`@kamimen` のスコープに **Read and write (stage only)**、組織へのアクセスなし、Bypass 2FA は入れずに作ってください。このトークンはステージしかできないので、漏れても公開はされません。公開には、承認のときのあなたの 2FA が必ず要ります。
 
-1. 初版だけは手元で公開します（パッケージが存在しないと、Trusted Publisher を登録できないため）: `npm publish --access public`（2FA のコードを聞かれます。スコープつきのパッケージは、`--access public` を付けないと非公開になります）
-2. npmjs.com でパッケージを開き、Settings の Trusted Publisher で、GitHub Actions、owner `kamimen`、repository `shinbun-css`、workflow `release.yml` を登録します。
-3. 以降は、`v*` のタグを push すると公開されます。
+```sh
+pbpaste | gh secret set NPM_TOKEN --repo kamimen/shinbun-css
+```
