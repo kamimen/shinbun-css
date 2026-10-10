@@ -51,7 +51,7 @@ for (const m of js.matchAll(/export function (\w+)/g)) {
 }
 
 // 5. 文書: 文書の中のバッククォートで囲んだ名前が、マニフェストにあること
-const docs = ["docs/SPEC.md", "README.md", "README_en.md", "docs/PLAN.md", "docs/API.md"].filter((f) => {
+const docs = ["docs/SPEC.md", "README.md", "README_ja.md", "docs/PLAN.md", "docs/API.md"].filter((f) => {
   try { read(f); return true; } catch { return false; }
 });
 for (const f of docs) {
