@@ -19,10 +19,10 @@ CSS for laying out Japanese newspaper pages (新聞の紙面, *shinbun no shimen
 
 ## Usage
 
-Load the CSS and write the page. The only classes are `.sb-paper` (the root of a page) and `.sb-page` (the page area).
+Load the CSS from the CDN (jsDelivr, served from npm) and write the page. The only classes are `.sb-paper` (the root of a page) and `.sb-page` (the page area).
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kamimen/shinbun-css@v0.1.1/dist/shinbun.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@kamimen/shinbun-css@0.1.1/dist/shinbun.min.css">
 
 <div class="sb-paper">
   <main class="sb-page">
@@ -43,12 +43,12 @@ Load the CSS and write the page. The only classes are `.sb-paper` (the root of a
 The optional JavaScript (tate-chu-yoko for 2-digit numbers, writing-direction switch, overflow detection) is loaded like this:
 
 ```html
-<script type="module" src="https://cdn.jsdelivr.net/gh/kamimen/shinbun-css@v0.1.1/dist/shinbun.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@kamimen/shinbun-css@0.1.1/dist/shinbun.js"></script>
 ```
 
-`@v0.1.1` in the URL is the version to load. Pin it, and the display will not change when a newer version comes out. To host the files yourself, copy `dist/shinbun.min.css` from the repository.
+`@0.1.1` in the URL is the version to load. Pin it, and the display will not change when a newer version comes out.
 
-### From npm
+### Install from npm
 
 ```sh
 npm install @kamimen/shinbun-css
@@ -59,7 +59,7 @@ import "@kamimen/shinbun-css/css/min";            // the minified stylesheet (al
 import { autoTcy } from "@kamimen/shinbun-css/js"; // the optional script
 ```
 
-The files are also on jsDelivr from npm: `https://cdn.jsdelivr.net/npm/@kamimen/shinbun-css@0.1.1/dist/shinbun.min.css`.
+To host the files yourself, copy `node_modules/@kamimen/shinbun-css/dist/shinbun.min.css`.
 
 ### Tiling rectangles with coordinates
 
