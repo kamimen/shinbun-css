@@ -1,4 +1,4 @@
-# API リファレンス (v0.1.0)
+# API リファレンス (v0.1.1)
 
 > このファイルは `src/manifest.json` から `scripts/gen.mjs` が生成します。**手で編集しないでください**（`npm run gen` で更新します）。
 

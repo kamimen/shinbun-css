@@ -20,7 +20,7 @@
 CSS を読み込み、紙面を書きます。クラスは、紙面の根 `.sb-paper` と、紙面領域 `.sb-page` だけです。
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kamimen/shinbun-css@v0.1.0/dist/shinbun.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kamimen/shinbun-css@v0.1.1/dist/shinbun.min.css">
 
 <div class="sb-paper">
   <main class="sb-page">
@@ -41,10 +41,10 @@ CSS を読み込み、紙面を書きます。クラスは、紙面の根 `.sb-p
 任意の JavaScript（2 桁の数字の縦中横、組方向の切り替え、はみ出しの検出）は、次のように読み込みます。
 
 ```html
-<script type="module" src="https://cdn.jsdelivr.net/gh/kamimen/shinbun-css@v0.1.0/dist/shinbun.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/kamimen/shinbun-css@v0.1.1/dist/shinbun.js"></script>
 ```
 
-URL の `@v0.1.0` は、読み込むバージョンです。固定しておくと、あとで更新されても表示が変わりません。自分のサーバーに置く場合は、リポジトリの `dist/shinbun.min.css` をコピーしてください。
+URL の `@v0.1.1` は、読み込むバージョンです。固定しておくと、あとで更新されても表示が変わりません。自分のサーバーに置く場合は、リポジトリの `dist/shinbun.min.css` をコピーしてください。
 
 ### npm から使う
 
@@ -57,7 +57,7 @@ import "@kamimen/shinbun-css/css/min";            // 最小化した CSS（"@kam
 import { autoTcy } from "@kamimen/shinbun-css/js"; // 任意のスクリプト
 ```
 
-npm 経由で jsDelivr からも読み込めます: `https://cdn.jsdelivr.net/npm/@kamimen/shinbun-css@0.1.0/dist/shinbun.min.css`
+npm 経由で jsDelivr からも読み込めます: `https://cdn.jsdelivr.net/npm/@kamimen/shinbun-css@0.1.1/dist/shinbun.min.css`
 
 ### 座標指定で、長方形に敷き詰める
 

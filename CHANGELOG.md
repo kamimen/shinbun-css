@@ -4,6 +4,18 @@
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-10-11
+
+### 追加
+
+- npm に `@kamimen/shinbun-css` として公開（`npm install @kamimen/shinbun-css`）。タグを push すると、Release のワークフローが provenance つきで公開する
+- README に、npm からの使い方（`@kamimen/shinbun-css/css/min`、`@kamimen/shinbun-css/js`）を追記
+- `package.json` に `publishConfig` を追加
+
+### 変更
+
+- README を英語に（日本語版は `README_ja.md`）。日本語の組版用語は日本語も併記
+
 ## [0.1.0] - 2026-10-08
 
 最初の公開に向けた版。

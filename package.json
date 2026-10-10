@@ -1,6 +1,6 @@
 {
   "name": "@kamimen/shinbun-css",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "日本の新聞紙面（縦組み・段組み・段抜き見出し）のための、依存なしの CSS。CSS for Japanese newspaper layout: vertical writing, dan (column) grid, and column-spanning headlines.",
   "author": "kiwamizamurai",
   "license": "MIT",

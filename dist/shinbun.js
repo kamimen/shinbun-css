@@ -1,4 +1,4 @@
-/*! shinbun.js v0.1.0 | MIT License | shinbun.css の任意の補助スクリプト（CSS だけでも使える） */
+/*! shinbun.js v0.1.1 | MIT License | shinbun.css の任意の補助スクリプト（CSS だけでも使える） */
 
 /**
  * 文字列を「縦中横にする部分」とそれ以外に分ける（DOM に依存しない純粋な関数）。
